@@ -15,6 +15,14 @@
             font-size: 0.14rem;
             color: white;
         }
+        .clearfix:after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .clearfix{
+            zoom: 1;
+        }
         header{
             padding:0 0.15rem;
             text-align: center;
@@ -73,13 +81,13 @@
     </style>
 </head>
 <body>
-<header>
+<header class="clearfix">
     <a class="close" href="" >关闭</a>
     <a class="register" href="" >注册</a>
     <span class="sign-in">登录</span>
 </header>
 <main>
-    <form>
+    <form class="clearfix">
         <div class="tel">
             <input type="tel" placeholder="请输入手机号">
         </div>
