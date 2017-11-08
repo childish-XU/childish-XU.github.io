@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>workers</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        body,
+        button,
+        input,
+        ul,
+        li,
+        p,
+        span,
+        .header,
+        .header__top,
+        .btn__employee,
+        .btn__employer,
+        .btn__map,
+        .nav__items,
+        .nav__btn,
+        .row,
+        .col-xs-4,
+        .col-xs-8 {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 625%;
+        }
+        body {
+            font-size: .14rem;
+        }
+        button,
+        input {
+            border: none;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .header{
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 999;
+        }
+        .header__top {
+            height: .44rem;
+            padding-top: .05rem;
+            font-size: 0;
+            background-color: #5abfcd;
+        }
+        .btn-set{
+            margin: 0 auto;
+            width: 1.42rem;
+            border-radius: 5px;
+            background-color: #51a7b3;
+        }
+        .btn__employee,
+        .btn__employer {
+            height: .35rem;
+            width: .71rem;
+            font-size: .16rem;
+        }
+        .btn__employer {
+            border-radius: 5px;
+            color: #fff;
+            background-color: transparent;
+        }
+        .btn__employee {
+            border-radius: 5px;
+            color: #5abfcd;
+            background-color: #fff;
+        }
+        .btn__map {
+            position: absolute;
+            top: .11rem;
+            right: .15rem;
+            width: .21rem;
+            height: .22rem;
+            background: url("images/worker_sprite.png") no-repeat 0 0;
+        }
+        .nav__items {
+            position: relative;
+            line-height: .4rem;
+        }
+        .nav__btn {
+            width: 100%;
+            box-sizing: border-box;
+            border-right: 1px solid #e0e4e6;
+            border-bottom: 1px solid #e0e4e6;
+            color: #a2a2a2;
+            background-color: #fff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .nav__items .menu {
+            width: 100%;
+            display: none;
+            text-align: center;
+            list-style: none;
+            background-color: #fff;
+        }
+        .menu li{
+            border: 1px solid #e0e4e6;
+            border-top: none;
+        }
+        .nav__items:hover .menu {
+            display: block;
+        }
+        .nav__items .pull {
+            position: absolute;
+            top: .18rem;
+            right: .06rem;
+            width: .07rem;
+            height: .04rem;
+            background: url("images/worker_sprite.png") no-repeat -25px 0;
+        }
+        .main{
+            position: absolute;
+            top: .85rem;
+            right: 0;
+            bottom: .5rem;
+            left: 0;
+            overflow-y:scroll;
+            color: #a2a2a2;
+        }
+        .main .list {
+            height: 0.9rem;
+            line-height: .25rem;
+            border-bottom: 1px solid #e0e4e6;
+        }
+        .main .list__l{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-left: .34rem;
+        }
+        .list__l p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .list__l .date {
+            color: #000;
+        }
+        .list__l .date-img {
+            position: absolute;
+            top: .06rem;
+            left: .15rem;
+            display: block;
+            width: 12px;
+            height: 12px;
+            background: url("images/worker_sprite.png") no-repeat -50px 0;
+        }
+        .list__l .address-img {
+            position: absolute;
+            top: .57rem;
+            left: .17rem;
+            display: block;
+            width: 9px;
+            height: 12px;
+            background: url("images/worker_sprite.png") no-repeat -75px 0;
+        }
+        .main .list__r{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-right: .15rem;
+            white-space: nowrap;
+            text-align: right;
+            font-size: 0;
+            color: #f00;
+        }
+        .price{
+            font-size: .15rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .next{
+            display: inline-block;
+            margin-left: .11rem;
+            width: 9px;
+            height: 17px;
+            vertical-align: middle;
+            background: url("images/worker_sprite.png") no-repeat -100px -25px;
+        }
+        .footer{
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: .01rem .83rem;
+            height: .5rem;
+            border-top: 1px solid #e0e4e6;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: .12rem;
+            background-color: #f7f9fa;
+        }
+        .footer__icon--m {
+            width: 47px;
+            height: 47px;
+            background: url("images/worker_sprite.png")no-repeat 0 -25px;
+        }
+        .footer__icon--l {
+            color: #5abfcd;
+            background-color: transparent;
+        }
+        .footer__icon--r {
+            color: #989898;
+            background-color: transparent;
+        }
+        .icon__home {
+            display: block;
+            margin: .05rem auto;
+            width: 23px;
+            height: 20px;
+            background: url("images/worker_sprite.png")no-repeat -50px -25px;
+        }
+        .icon__mine {
+            display: block;
+            margin: .05rem auto;
+            width: 21px;
+            height: 20px;
+            background: url("images/worker_sprite.png")no-repeat -75px -25px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header affix">
+        <div class="header__top">
+            <div class="btn-set">
+                <button class="btn__employer">找雇主</button>
+                <button class="btn__employee">找护工</button>
+            </div>
+            <button class="btn__map"></button>
+        </div>
+        <div class="header__nav row">
+            <div class="nav__items col-xs-4">
+                <button class="nav__btn">所在地</button>
+                <ul class="menu">
+                    <li><a>朝阳区</a></li>
+                    <li><a>海淀区</a></li>
+                    <li><a>通州区</a></li>
+                </ul>
+                <div class="pull"></div>
+            </div>
+            <div class="nav__items col-xs-4">
+                <button class="nav__btn">食宿</button>
+                <ul class="menu">
+                    <li><a>包食宿</a></li>
+                    <li><a>包住宿</a></li>
+                    <li><a>不包食宿</a></li>
+                </ul>
+                <div class="pull"></div>
+            </div>
+            <div class="nav__items col-xs-4">
+                <button class="nav__btn">病人情况</button>
+                <ul class="menu">
+                    <li><a>昏迷</a></li>
+                    <li><a>虚弱</a></li>
+                    <li><a>清醒</a></li>
+                </ul>
+                <div class="pull"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="main">
+        <div class="list row">
+            <div class="list__l col-xs-8">
+                <p>服务日期</p>
+                <p class="date">2017-11-8至2017-11-11</p>
+                <p>北京·通州·果园</p>
+                <span class="date-img"></span>
+                <span class="address-img"></span>
+            </div>
+            <div class="list__r col-xs-4">
+                <p class="price">25元/小时</p>
+                <a class="next"></a>
+            </div>
+        </div>
+        <div class="list row">
+            <div class="list__l col-xs-8">
+                <p>服务日期</p>
+                <p class="date">2017-11-8至2017-11-11</p>
+                <p>北京·通州·果园</p>
+                <span class="date-img"></span>
+                <span class="address-img"></span>
+            </div>
+            <div class="list__r col-xs-4">
+                <p class="price">35元/小时</p>
+                <a class="next"></a>
+            </div>
+        </div>
+        <div class="list row">
+            <div class="list__l col-xs-8">
+                <p>服务日期</p>
+                <p class="date">2017-11-8至2017-11-11</p>
+                <p>北京·通州·果园</p>
+                <span class="date-img"></span>
+                <span class="address-img"></span>
+            </div>
+            <div class="list__r col-xs-4">
+                <p class="price">45元/小时</p>
+                <a class="next"></a>
+            </div>
+        </div>
+        <div class="list row">
+            <div class="list__l col-xs-8">
+                <p>服务日期</p>
+                <p class="date">2017-11-8至2017-11-11</p>
+                <p>北京·通州·果园</p>
+                <span class="date-img"></span>
+                <span class="address-img"></span>
+            </div>
+            <div class="list__r col-xs-4">
+                <p class="price">45元/小时</p>
+                <a class="next"></a>
+            </div>
+        </div>
+        <div class="list row">
+            <div class="list__l col-xs-8">
+                <p>服务日期</p>
+                <p class="date">2017-11-8至2017-11-11</p>
+                <p>北京·通州·果园</p>
+                <span class="date-img"></span>
+                <span class="address-img"></span>
+            </div>
+            <div class="list__r col-xs-4">
+                <p class="price">45元/小时</p>
+                <a class="next"></a>
+            </div>
+        </div>
+        <div class="list row">
+            <div class="list__l col-xs-8">
+                <p>服务日期</p>
+                <p class="date">2017-11-8至2017-11-11</p>
+                <p>北京·通州·果园</p>
+                <span class="date-img"></span>
+                <span class="address-img"></span>
+            </div>
+            <div class="list__r col-xs-4">
+                <p class="price">35元/小时</p>
+                <a class="next"></a>
+            </div>
+        </div>
+        <div class="list row">
+            <div class="list__l col-xs-8">
+                <p>服务日期</p>
+                <p class="date">2017-11-8至2017-11-11</p>
+                <p>北京·通州·果园</p>
+                <span class="date-img"></span>
+                <span class="address-img"></span>
+            </div>
+            <div class="list__r col-xs-4">
+                <p class="price">35元/小时</p>
+                <a class="next"></a>
+            </div>
+        </div>
+        <div class="list row">
+            <div class="list__l col-xs-8">
+                <p>服务日期</p>
+                <p class="date">2017-11-8至2017-11-11</p>
+                <p>北京·通州·果园</p>
+                <span class="date-img"></span>
+                <span class="address-img"></span>
+            </div>
+            <div class="list__r col-xs-4">
+                <p class="price">35元/小时</p>
+                <a class="next"></a>
+            </div>
+        </div>
+  </div>
+</section>
+<footer>
+    <div class="footer affix">
+        <button class="footer__icon--l pull-left">
+            <span class="icon__home"></span>
+            首页
+        </button>
+        <button class="footer__icon--r pull-right">
+            <span class="icon__mine"></span>
+            我的
+        </button>
+        <button class="footer__icon--m"></button>
+    </div>
+</footer>
+</body>
+</html>
