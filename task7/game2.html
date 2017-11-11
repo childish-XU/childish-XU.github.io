@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>game2</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        html {
+            font-size: 625%;
+        }
+        body {
+            font-size: .12rem;
+            color: #fff;
+            background-color: #29bde0;
+        }
+        body,
+        h3,
+        button,
+        p,
+        span,
+        ul,
+        li,
+        .container-fluid,
+        .row,
+        .col-xs-4,
+        .col-sm-3,
+        .col-md-2,
+        .col-lg-1 {
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            border: none;
+        }
+        .btn {
+            border-radius: 0;
+        }
+        .header {
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+        .header__top {
+            padding: .17rem .12rem .07rem .12rem;
+        }
+        .icon-menu {
+            width: 20px;
+            height: 20px;
+            background: url("images/task7-4.png") no-repeat 0 0;
+        }
+        .icon-shut {
+            width: 20px;
+            height: 20px;
+            background: url("images/task7-4.png") no-repeat -25px 0;
+        }
+        .header__title {
+            font-size: .17rem;
+            line-height: .2rem;
+        }
+        .header__notice {
+            padding: .07rem .09rem .07rem .26rem;
+            background-color: #b9e9f5;
+        }
+        .icon-start {
+            width: 26px;
+            height: 26px;
+            background: url("images/task7-2.png") no-repeat 0 0;
+        }
+        .header__text {
+            font-size: .14rem;
+            line-height: .26rem;
+        }
+        .header__text--black {
+            color: #000;
+        }
+        .header__speak {
+            padding-left: .36rem;
+        }
+        .icon-speak {
+            display: block;
+            width: 8px;
+            height: 7px;
+            background: url("images/task7-2.png") no-repeat -50px 0;
+        }
+        .main {
+            top: 1.1rem;
+            right: 0;
+            bottom: .95rem;
+            left: 0;
+            overflow-y: auto;
+        }
+        .main .identity {
+            position: relative;
+        }
+        .id__layout {
+            width: 100%;
+            padding-top: 100%;
+        }
+        .id-frame {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: .68rem;
+            height: .68rem;
+            border: 2px solid #fff;
+            box-sizing: border-box;
+        }
+        .id__name {
+            font-size: .14rem;
+            line-height: .5rem;
+            color: #000;
+            background-color: #f5c97b;
+        }
+        .id__number{
+            line-height: .14rem;
+            background-color: #83b09a;
+        }
+        .id__role{
+            display: none;
+            position: absolute;
+            top: .78rem;
+            left: 0;
+            font-size: 0;
+        }
+        .id-frame:hover .id__role{
+            display: block;
+        }
+        .icon-knife,
+        .icon-lens,
+        .icon-shot,
+        .icon-treat {
+            display: inline-block;
+            margin-right: .01rem;
+            width: 15px;
+            height: 15px;
+        }
+        .icon-knife {
+            background: url("images/task7-2.png") no-repeat -75px 0;
+        }
+        .icon-lens {
+            background: url("images/task7-2.png") no-repeat -100px 0;
+        }
+        .icon-shot {
+            background: url("images/task7-2.png") no-repeat -125px 0;
+        }
+        .icon-treat {
+            background: url("images/task7-2.png") no-repeat -150px 0;
+        }
+        .footer {
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: .21rem .39rem .3rem .39rem;
+        }
+        .btn-vote {
+            height: .44rem;
+            font-size: .2rem;
+            color: #fff;
+            background-color: #fbb435;
+        }
+    </style>
+</head>
+<body>
+<header class="container-fluid">
+    <div class="header affix">
+        <div class="header__top text-center">
+            <a href="game1.html">
+                <button class="icon-menu pull-left"></button>
+            </a>
+            <a href="game3.html">
+                <button class="icon-shut pull-right"></button>
+            </a>
+            <h3 class="header__title">投票</h3>
+        </div>
+        <div class="header__notice">
+            <button class="icon-start pull-right"></button>
+            <p class="header__text header__text--black">发言讨论结束，大家请投票</p>
+        </div>
+        <div class="header__speak pull-left">
+            <span class="icon-speak"></span>
+            <p class="header__text">点击得票数最多人的头像</p>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="main affix">
+        <div class="row text-center">
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="identity col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                <div class="id__layout">
+                    <div class="id-frame">
+                        <p class="id__name">水民</p>
+                        <p class="id__number">1号</p>
+                        <ul class="id__role">
+                            <li class="icon-knife"></li>
+                            <li class="icon-lens"></li>
+                            <li class="icon-shot"></li>
+                            <li class="icon-treat"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="container-fluid">
+    <div class="footer affix text-center">
+        <a href="game3.html">
+            <button class="btn-vote btn btn-block">投死</button>
+        </a>
+    </div>
+</footer>
+<audio src="audio/吉森信.mp3" autoplay="autoplay"></audio>
+</body>
+</html>
