@@ -1,0 +1,56 @@
+.header__nav .option__recommend {
+    border-bottom: .04rem solid #fff;
+}
+.banner {
+    max-width: 100%;
+}
+.main__title {
+    margin-top: .3rem;
+    color: #000;
+}
+.main__left {
+    margin-top: .2rem;
+    padding-left: 0;
+}
+.main__left--nav {
+    background-color: #fff;
+    padding-bottom: .1rem;
+}
+.main__left dt {
+    line-height: .62rem;
+    border-bottom: .01rem solid #e6e6e6;
+}
+.main__left dd {
+    margin-top: .3rem;
+    color: #29b078;
+}
+.color-orange {
+    font-size: .2rem;
+    color: #ff650e;
+}
+.main__right {
+    margin-top: .2rem;
+    padding: 0;
+    background-color: #fff;
+}
+.company {
+    line-height: .28rem;
+    text-indent: .24rem;
+}
+.company__top {
+    padding: .3rem .6rem .2rem .6rem;
+}
+.company__logo {
+    margin: .35rem auto;
+    width: 1.22rem;
+    height: .33rem;
+    background-image: url("images/task8-3-tudou.png");
+    background-size: cover;
+}
+.company__bottom {
+    border-top: .01rem solid #e6e6e6;
+    padding: .3rem .6rem;
+}
+.company__bottom p {
+    margin-bottom: .3rem;
+}

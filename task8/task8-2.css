@@ -1,0 +1,101 @@
+.header__nav .option__career {
+    border-bottom: .04rem solid #fff;
+}
+.section__title {
+    margin: 0;
+    line-height: .8rem;
+    border-bottom: 1px solid #d0d6d9;
+    color: #000;
+}
+.main__nav {
+    border-bottom: 1px solid #edf1f2;
+}
+.main__nav .nav-pills li a {
+    margin-top: .14rem;
+    margin-left: .2rem;
+    padding: .05rem;
+    color: #000;
+}
+.main__nav li.active a {
+    color: #fff;
+    background-color: #29b078;
+}
+.navbar-text {
+    line-height: .3rem;
+}
+.career {
+    margin-top: .48rem;
+}
+.career__layout {
+    position: relative;
+    background-color: #fff;
+}
+.career__header {
+    padding: .2rem .1rem;
+    color: #000;
+}
+.career__portrait {
+    width: 1.39rem;
+    height: 1.39rem;
+    background: url("images/task8-2-portrait.jpg") no-repeat 0 0;
+    background-size: cover;
+}
+.career__title {
+    font-weight: 700;
+}
+.career__describe {
+    margin-left: 1.5rem;
+    font-size: .14rem;
+    word-wrap: break-word;
+}
+.career__table {
+    width: 100%;
+    font-size: .12rem;
+    border-top: 1px solid #edf1f2;
+}
+.career__table td {
+    padding: 0 .05rem;
+    border-bottom: 1px solid #edf1f2;
+}
+.table__top--left {
+    width: 45%;
+    line-height: .4rem;
+}
+.table__years {
+    line-height: .35rem;
+}
+.table__top--left,
+.table__salary {
+    border-right: 1px solid #edf1f2;
+}
+.table__footer {
+    line-height: .38rem;
+    font-size: .14rem;
+    font-weight: 700;
+    color: #000;
+}
+.career__tips {
+    font-size: .12rem;
+    padding: .1rem .05rem;
+}
+.career__explain {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: .8rem .4rem;
+    font-size: .14rem;
+    color: #fff;
+    background-color: rgba(0,0,0,.8);
+}
+.career__explain h5 {
+    margin-bottom: .4rem;
+}
+.career__explain p {
+    text-indent: .2rem;
+}
+.career__layout:hover .career__explain {
+    display: block;
+}

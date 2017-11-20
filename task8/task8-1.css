@@ -1,0 +1,131 @@
+.header__nav .option__home {
+    border-bottom: .04rem solid #fff;
+}
+.main__items {
+    padding-top: .8rem;
+}
+.main__items .advantage {
+    padding: .3rem;
+}
+.icon-efficient {
+    margin: 0 auto;
+    width: .43rem;
+    height: .62rem;
+    background: url("images/task8__icon.png") no-repeat 0 -.5rem;
+    background-size: 4rem 1.5rem;
+}
+.icon-standard {
+    margin: 0 auto;
+    width: .6rem;
+    height: .62rem;
+    background: url("images/task8__icon.png") no-repeat -1rem -.5rem;
+    background-size: 4rem 1.5rem;
+}
+.icon-relation {
+    margin: 0 auto;
+    width: .52rem;
+    height: .62rem;
+    background: url("images/task8__icon.png") no-repeat -2rem -.5rem;
+    background-size: 4rem 1.5rem;
+}
+.title {
+    padding: .2rem;
+    font-weight: 700;
+    color: #000;
+}
+.main__items .count {
+    margin-top: .8rem;
+}
+.count--icon {
+    display: inline-block;
+    width: .13rem;
+    height: .13rem;
+    background: url("images/task8__icon.png") no-repeat -2.5rem 0;
+    background-size: 4rem 1.5rem;
+}
+.count__number {
+    color: #29b078;
+}
+.study {
+    height: .7rem;
+    padding: 0;
+    margin-top: .45rem;
+    margin-bottom: .45rem;
+}
+.study__number {
+    width: .7rem;
+    line-height: .7rem;
+    color: #29b078;
+    background: url("images/task8__icon.png") no-repeat -3rem -.5rem;
+    background-size: 4rem 1.5rem;
+}
+.study__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: .8rem;
+    margin-right: .4rem;
+}
+.icon-arrow {
+    position: absolute;
+    top: 50%;
+    right: .1rem;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: .27rem;
+    height: .27rem;
+    background: url("images/task8__icon.png") no-repeat -3rem 0;
+    background-size: 4rem 1.5rem;
+}
+.main__items .student {
+    margin-top: .2rem;
+    padding: .2rem .3rem .3rem .3rem;
+    border: 1px solid #f6f6f6;
+    background-color: #fff;
+}
+.img-student1 {
+    margin: 0 auto;
+    width: 1.08rem;
+    height: 1.08rem;
+    background: url("images/task8-1-portrait_01.jpg") no-repeat 0 0;
+    background-size: cover;
+}
+.img-student2 {
+    margin: 0 auto;
+    width: 1.08rem;
+    height: 1.08rem;
+    background: url("images/task8-1-portrait_02.jpg") no-repeat 0 0;
+    background-size: cover;
+}
+.img-student3 {
+    margin: 0 auto;
+    width: 1.08rem;
+    height: 1.08rem;
+    background: url("images/task8-1-portrait_03.jpg") no-repeat 0 0;
+    background-size: cover;
+}
+.img-student4 {
+    margin: 0 auto;
+    width: 1.08rem;
+    height: 1.08rem;
+    background: url("images/task8-1-portrait_04.jpg") no-repeat 0 0;
+    background-size: cover;
+}
+.main__items .company {
+    padding-left: .15rem;
+    padding-right: .15rem;
+}
+.logo-company {
+    width: 100%;
+}
+.foot__link li {
+    margin-left: .17rem;
+    border-bottom: 1px solid transparent;
+}
+.foot__link li:hover {
+    border-bottom: 1px solid #29b078;
+}
+.foot__link span {
+    margin-right: .05rem;
+    font-weight: 900;
+}
