@@ -5,16 +5,22 @@
     margin: 0;
     line-height: .8rem;
     border-bottom: 1px solid #d0d6d9;
+    font-size: .16rem;
     color: #000;
 }
 .main__nav {
+    padding-top: .14rem;
+    padding-bottom: .14rem;
     border-bottom: 1px solid #edf1f2;
 }
+.main__nav .navbar-text {
+    margin: 0 .1rem 0 0;
+}
 .main__nav .nav-pills li a {
-    margin-top: .14rem;
-    margin-left: .2rem;
     padding: .05rem;
+    margin-right: .1rem;
     color: #000;
+    font-size: .14rem;
 }
 .main__nav li.active a {
     color: #fff;
