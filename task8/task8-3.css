@@ -10,7 +10,6 @@
 }
 .main__left {
     margin-top: .2rem;
-    padding-left: 0;
 }
 .main__left--nav {
     background-color: #fff;
@@ -24,18 +23,20 @@
     margin-top: .3rem;
     color: #29b078;
 }
+.main__left dd.checked {
+    color: #ff650e;
+}
 .color-orange {
     font-size: .2rem;
     color: #ff650e;
 }
 .main__right {
     margin-top: .2rem;
-    padding: 0;
-    background-color: #fff;
 }
 .company {
     line-height: .28rem;
     text-indent: .24rem;
+    background-color: #fff;
 }
 .company__top {
     padding: .3rem .6rem .2rem .6rem;

@@ -111,12 +111,34 @@
     background: url("images/task8-1-portrait_04.jpg") no-repeat 0 0;
     background-size: cover;
 }
+#carousel-student ol {
+    bottom: -.45rem;
+}
+#carousel-student li {
+    border: none;
+    box-shadow: 0 0 .01rem .01rem #eee;
+    background-color: #fff;
+}
+#carousel-student li.active {
+    background-color: #29b078;
+}
 .main__items .company {
     padding-left: .15rem;
     padding-right: .15rem;
 }
 .logo-company {
     width: 100%;
+    font-size: 0;
+    background: url("images/company.png") no-repeat 0 0;
+    background-size: contain;
+}
+.logo-company li {
+    display: inline-block;
+    width: 20%;
+    padding-bottom: 14.58%;
+}
+.logo-company li:hover {
+    box-shadow: 0 0 .02rem .02rem #ddd;
 }
 .foot__link li {
     margin-left: .17rem;

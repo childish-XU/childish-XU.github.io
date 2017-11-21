@@ -20,6 +20,10 @@
     color: #fff;
     background-color: #29b078;
 }
+.main__nav .nav-pills li a:hover {
+    color: #fff;
+    background-color: #29b078;
+}
 .navbar-text {
     line-height: .3rem;
 }

@@ -8,36 +8,41 @@
     .container {
         width: 90%;
     }
-    .container .dropdown-menu {
+    .logo-site {
+        margin-left: 5%;
+    }
+    .container-fluid .mini__nav {
         position: relative;
         padding: 0;
-        margin: 0;
+        width: 100%;
         border: none;
         box-shadow: none;
         background-color: #29b078;
     }
-    .dropdown-menu li a {
-        line-height: .4rem;
-        color: #fff;
-    }
     .nav__menu {
         margin-top: .25rem;
+        margin-right: 5%;
         border: none;
         font-size: .35rem;
         color: #333;
         background-color: transparent;
     }
-    .mini__nav {
-        width: 100%;
+    .mini__nav li a {
+        border-bottom: 0.01rem solid transparent;
+        line-height: .4rem;
+        color: #fff;
+    }
+    .mini__nav li a:hover {
+        background-color: #29b078;
+        border-bottom: 0.01rem solid #fff;
+        color: #fff;
     }
     .align__center {
         text-align: center;
     }
-    .main__left {
-        padding-right: 0;
-    }
     .main__left dd {
-        text-align: center;
+        margin-left: 50%;
+        transform: translateX(-.45rem);
     }
 }
 .color-red {
@@ -96,7 +101,6 @@
     color: #fff;
 }
 .nav .option a:hover {
-    color: #eee;
     background-color: transparent;
 }
 .main {
@@ -133,11 +137,18 @@
     .container {
         width: 80%;
     }
+    .logo-site {
+        margin-left: 10%;
+    }
+    .header__nav .nav {
+        margin-right: 10%;
+    }
     .align__center {
         text-align: center;
     }
-    .main__left {
-        padding-right: 0;
+    .main__left dd {
+        margin-left: 50%;
+        transform: translateX(-.37rem);
     }
 }
 @media all and (min-width: 992px) and (max-width: 1199px){
@@ -146,6 +157,12 @@
     }
     .container {
         width: 80%;
+    }
+    .logo-site {
+        margin-left: 10%;
+    }
+    .header__nav .nav {
+        margin-right: 10%;
     }
     .main__left dd {
         margin-left: 50%;
@@ -161,6 +178,12 @@
     }
     .container {
         width: 80%;
+    }
+    .logo-site {
+        margin-left: 10%;
+    }
+    .header__nav .nav {
+        margin-right: 10%;
     }
     .main__left dd {
         margin-left: 50%;

@@ -21,18 +21,18 @@
         </div>
     </div>
     <nav class="header__nav">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row dropdown">
                 <img class="logo-site" src="images/task8-logo.png" alt="logo">
                 <!--按钮菜单-->
                 <button class="dropdown-toggle nav__menu pull-right visible-xs" data-toggle="dropdown">
                     <span class="glyphicon glyphicon-menu-hamburger"></span>
                 </button>
-                <ul class="mini__nav dropdown-menu">
-                    <li class="option text-center"><a href="task8-1.html">首页</a></li>
-                    <li class="option text-center"><a href="task8-2.html">职业</a></li>
-                    <li class="option text-center"><a href="task8-3.html">推荐</a></li>
-                    <li class="option text-center"><a href="#">关于</a></li>
+                <ul class="mini__nav dropdown-menu hidden-lg hidden-md hidden-sm">
+                    <li class="text-center"><a href="task8-1.html">首页</a></li>
+                    <li class="text-center"><a href="task8-2.html">职业</a></li>
+                    <li class="text-center"><a href="task8-3.html">推荐</a></li>
+                    <li class="text-center"><a href="#">关于</a></li>
                 </ul>
                 <!--导航条菜单-->
                 <ul class="nav nav-pills navbar-right text-center hidden-xs">
@@ -71,18 +71,6 @@
         </div>
     </div>
 </header>
-
-
-
-
-
-
-
-
-
-
-
-
 <main class="main">
     <div class="main__items container">
         <div class="row align__center">
@@ -101,11 +89,11 @@
                 <h5 class="title text-center">人脉</h5>
                 <p>同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路</p>
             </div>
-            <div class="count col-lg-3 visible-lg">
+            <div class="count col-lg-3">
                 <p class="count__number"><span class="count--icon"></span>12400</p>
                 <p>累计在线学习人数</p>
                 <p class="count__number"><span class="count--icon"></span>12400</p>
-                <p>学院已经找到满意工作</p>
+                <p>学员已经找到满意工作</p>
             </div>
         </div>
     </div>
@@ -160,33 +148,141 @@
         <div class="row">
             <h4 class="title text-center">优秀学员展示</h4>
         </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-4">
-                <div class="student box-shadow">
-                    <div class="img-student1"></div>
-                    <h5 class="title text-center">技术顾问：罗大佑</h5>
-                    <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+        <div id="carousel-student" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-student" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-student" data-slide-to="1"></li>
+                <li data-target="#carousel-student" data-slide-to="2"></li>
+                <li data-target="#carousel-student" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="student box-shadow">
+                        <div class="img-student1"></div>
+                        <h5 class="title text-center">技术顾问：罗大佑</h5>
+                        <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="student box-shadow">
+                        <div class="img-student2"></div>
+                        <h5 class="title text-center">技术顾问：罗大佑</h5>
+                        <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="student box-shadow">
+                        <div class="img-student3"></div>
+                        <h5 class="title text-center">技术顾问：罗大佑</h5>
+                        <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="student box-shadow">
+                        <div class="img-student4"></div>
+                        <h5 class="title text-center">技术顾问：罗大佑</h5>
+                        <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4">
-                <div class="student box-shadow">
-                    <div class="img-student2"></div>
-                    <h5 class="title text-center">技术顾问：罗大佑</h5>
-                    <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-                <div class="student box-shadow">
-                    <div class="img-student3"></div>
-                    <h5 class="title text-center">技术顾问：罗大佑</h5>
-                    <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student1"></div>
+                                <h5 class="title text-center">技术顾问：李宗盛</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student2"></div>
+                                <h5 class="title text-center">技术顾问：李宗盛</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student3"></div>
+                                <h5 class="title text-center">技术顾问：李宗盛</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student4"></div>
+                                <h5 class="title text-center">技术顾问：李宗盛</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-                <div class="student box-shadow">
-                    <div class="img-student4"></div>
-                    <h5 class="title text-center">技术顾问：罗大佑</h5>
-                    <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student1"></div>
+                                <h5 class="title text-center">技术顾问：崔健</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student2"></div>
+                                <h5 class="title text-center">技术顾问：崔健</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student3"></div>
+                                <h5 class="title text-center">技术顾问：崔健</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student4"></div>
+                                <h5 class="title text-center">技术顾问：崔健</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student1"></div>
+                                <h5 class="title text-center">技术顾问：王菲</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student2"></div>
+                                <h5 class="title text-center">技术顾问：王菲</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student3"></div>
+                                <h5 class="title text-center">技术顾问：王菲</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="student box-shadow">
+                                <div class="img-student4"></div>
+                                <h5 class="title text-center">技术顾问：王菲</h5>
+                                <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -196,12 +292,18 @@
             <h4 class="title text-center">战略合作企业</h4>
         </div>
         <div class="row company">
-            <img class="logo-company" src="images/company.png">
+            <ul class="logo-company">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
     </div>
 </main>
 <footer>
-    <div class="footer__top container text-center">
+    <div class="footer__top container">
         <div class="row">
             <h4 class="title text-center">友情链接</h4>
         </div>
