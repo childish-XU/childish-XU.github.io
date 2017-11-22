@@ -40,6 +40,10 @@
     .align__center {
         text-align: center;
     }
+    .company .company__logo{
+        margin: 0 auto;
+        width: 240px;
+    }
     .main__left dd {
         margin-left: 50%;
         transform: translateX(-.45rem);

@@ -126,19 +126,17 @@
     padding-left: .15rem;
     padding-right: .15rem;
 }
-.logo-company {
-    width: 100%;
-    font-size: 0;
-    background: url("images/company.png") no-repeat 0 0;
-    background-size: contain;
-}
-.logo-company li {
-    display: inline-block;
+.company__logo {
+    padding-left: 0;
+    padding-right: 0;
     width: 20%;
-    padding-bottom: 14.58%;
 }
-.logo-company li:hover {
+.company__logo:hover {
+    z-index: 999;
     box-shadow: 0 0 .02rem .02rem #ddd;
+}
+.company__logo img {
+    width: 100%;
 }
 .foot__link li {
     margin-left: .17rem;
