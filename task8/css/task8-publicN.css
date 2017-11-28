@@ -55,6 +55,9 @@ html {
     border-bottom: 1px solid #fff;
     background-color: transparent;
 }
+.navbar-nav > li > a:focus {
+    background-color: transparent;
+}
 .navbar-nav .checked {
     border-bottom: 1px solid #fff;
 }
