@@ -1,11 +1,9 @@
-.header__nav .option__career {
-    border-bottom: .04rem solid #fff;
-}
 .section__title {
     margin: 0;
     line-height: .8rem;
     border-bottom: 1px solid #d0d6d9;
-    color: #000;
+    font-size: .16rem;
+    font-weight: 700;
 }
 .main__nav {
     padding-top: .14rem;
@@ -38,6 +36,7 @@
 }
 .career__layout {
     position: relative;
+    box-shadow: 0 0 .01rem .01rem #eee;
     background-color: #fff;
 }
 .career__header {
@@ -47,7 +46,7 @@
 .career__portrait {
     width: 1.39rem;
     height: 1.39rem;
-    background: url("images/task8-2-portrait.jpg") no-repeat 0 0;
+    background: url("../images/task8-2-portrait.jpg") no-repeat 0 0;
     background-size: cover;
 }
 .career__title {
@@ -108,4 +107,7 @@
 }
 .career__layout:hover .career__explain {
     display: block;
+}
+.color-red {
+    color: #f00;
 }

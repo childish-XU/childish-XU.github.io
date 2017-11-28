@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+}
+html {
+    font-size: 625%;
+}
+.title {
+    font-weight: 700;
+    padding: .12rem 0;
+    text-align: center;
+    color: #000;
+}
+.header__top {
+    padding-top: .07rem;
+    padding-bottom: .02rem;
+}
+.header__top .tel {
+    color: #29b078;
+    line-height: .25rem;
+}
+.login__btn button {
+    width: .25rem;
+    height: .25rem;
+    margin-left: .15rem;
+    border: none;
+    background-size: 4rem 1.5rem;
+}
+.wechat {
+    background: url("../images/task8__icon.png") no-repeat 0 0;
+}
+.qq {
+    background: url("../images/task8__icon.png") no-repeat -.5rem 0;
+}
+.sina {
+    background: url("../images/task8__icon.png") no-repeat -1rem 0;
+}
+.header__nav {
+    font-size: .16rem;
+    background-color: #29b078;
+}
+.navbar-brand {
+    padding: .05rem .15rem;
+}
+.navbar__logo {
+    max-height: 100%;
+}
+.navbar-header .icon-bar {
+    background-color: #888;
+}
+.navbar-nav > li > a {
+    border-bottom: 1px solid transparent;
+    color: #fff;
+}
+.navbar-nav > li > a:hover {
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+}
+.navbar-nav .checked {
+    border-bottom: 1px solid #fff;
+}
+.main {
+    padding-bottom: .8rem;
+    background-color: #fafafa;
+}
+.color-green {
+    color: #29b078;
+}
+.footer__bottom {
+    color: #fff;
+    background-color: #29b078;
+}
+.footer__bottom .copyright {
+    border-top: 1px solid #32c086;
+    line-height: .3rem;
+    font-size: .12rem;
+}
+.footer__content{
+    padding-top: .38rem;
+    padding-bottom: .18rem;
+}
+.footer__content a {
+    display: inline-block;
+    margin-top: .15rem;
+    margin-bottom: .15rem;
+    color: #fff;
+}
+.footer__content a.a__r20 {
+    padding-right: .2rem;
+}
+@media all and (min-width: 768px) {
+    .navbar-header .navbar-brand {
+        height: 1rem;
+    }
+    .navbar__logo {
+        margin-top: .2rem;
+    }
+    .navbar-nav > li > a {
+        border-bottom: 4px solid transparent;
+        width: 1rem;
+        line-height: .66rem;
+    }
+    .navbar-nav > li > a:hover {
+        border-bottom: 4px solid #fff;
+    }
+    .navbar-nav .checked {
+        border-bottom: 4px solid #fff;
+    }
+}
