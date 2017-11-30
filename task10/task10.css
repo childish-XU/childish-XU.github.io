@@ -1,0 +1,272 @@
+*{
+    padding: 0;
+}
+html {
+    font-size: 625%;
+}
+
+/*顶部登录、注册区*/
+.header__top {
+    color: #fff;
+    background-color: #1d7ad9;
+}
+.header__btn {
+    width: 1rem;
+    height: .4rem;
+    border-top: none;
+    border-bottom: none;
+    border-left: .01rem solid #fff;
+    border-right: .01rem solid #fff;
+    background-color: transparent;
+}
+.header__btn.checked {
+    background-color: #FFF;
+    color: #000;
+}
+.header__tel {
+    margin-bottom: 0;
+    line-height: .4rem;
+}
+
+/*移动版导航条*/
+.header__nav {
+    margin-bottom: .48rem;
+}
+.navbar-nav .btn{
+    width: 100%;
+    background-color: #fff;
+}
+.navbar-nav .btn:hover{
+    color: #fff;
+    background-color: #1d7ad9;
+}
+.navbar-nav .btn__checked {
+    color: #fff;
+    background-color: #1d7ad9;
+}
+
+/*流程图*/
+.progress__group {
+    position: relative;
+}
+.progress__group .progress {
+    height: .05rem;
+    background-color: #ccc;
+}
+.progress .progress-bar {
+    background-color: #ff7f02;
+    width: 25%;
+}
+.step__one,
+.step__two,
+.step__three,
+.step__four {
+    position: absolute;
+    display: block;
+    width: .24rem;
+    line-height: .24rem;
+    border-radius: .12rem;
+    text-align: center;
+    color: #fff;
+    background-color: #ccc;
+}
+.step__one {
+    top: 0;
+    left: 12.5%;
+    transform: translate(-50%,-40%);
+}
+.step__two {
+    top: 0;
+    left: 37.5%;
+    transform: translate(-50%,-40%);
+}
+.step__three {
+    top: 0;
+    left: 62.5%;
+    transform: translate(-50%,-40%);
+}
+.step__four {
+    top: 0;
+    left: 87.5%;
+    transform: translate(-50%,-40%);
+}
+.step__number--finish {
+    background-color: #ff7f02;
+}
+.step__title {
+    font-size: 0;
+}
+.step__title--finish {
+    color: #ff7f02;
+}
+.step__title li {
+    font-size: .12rem;
+    width: 25%;
+}
+
+/*表单面板*/
+.form {
+    padding-top: .2rem;
+    padding-bottom: .3rem;
+}
+.form__guide {
+    font-weight: 700;
+}
+.form__guide span {
+    display: inline-block;
+    width: .05rem;
+    height: .2rem;
+    border-radius: .02rem;
+    margin-right: .05rem;
+    vertical-align: bottom;
+    background-color: #1d7ad9;
+}
+.form__panel .panel-heading {
+    font-size: .18rem;
+    color: #1d7ad9;
+}
+.panel-heading span {
+    display: inline-block;
+    width: .22rem;
+    height: .2rem;
+    margin-right: .05rem;
+    vertical-align: middle;
+}
+.icon__type {
+    background: url("images/task10-icon.png") 0 0;
+    background-size: .7rem .2rem;
+}
+.icon__size {
+    background: url("images/task10-icon.png") -.44rem 0;
+    background-size: .7rem .2rem;
+}
+.icon__texture {
+    background: url("images/task10-icon.png") -.22rem 0;
+    background-size: .7rem .2rem;
+}
+.panel-body {
+    position: relative;
+    overflow: visible;
+    background-color: #fbfcff;
+}
+.form__panel label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+.form__panel input[type=radio] {
+    display: none;
+}
+input[type=radio] + label {
+    width: .18rem;
+    height: .18rem;
+    vertical-align: middle;
+    margin-right: .1rem;
+    margin-bottom: 0;
+    background: url("images/task10-radio.png") no-repeat 0 -.2rem;
+    background-size: .18rem .38rem;
+}
+input[type=radio]:checked + label {
+    background: url("images/task10-radio.png") no-repeat 0 0;
+    background-size: .18rem .38rem;
+}
+.select__details {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: 50%;
+    right: .17rem;
+    transform: translateY(-.19rem);
+    padding: .04rem .17rem;
+    width: 1.29rem;
+    height: .39rem;
+    border: 1px solid #e8e8e8;
+    color: #999;
+    background: url("images/task10-select.png") no-repeat .99rem .04rem;
+}
+.box__size input[type=number] {
+    width: .7rem;
+}
+.form__panel .panel-footer {
+    height: 2.84rem;
+    padding-top: 1.42rem;
+    background-color: #fff;
+}
+.panel-footer .btn {
+    width: 1.79rem;
+    height: .46rem;
+}
+
+/*页脚*/
+.footer__top {
+    padding-top: .7rem;
+    padding-bottom: .55rem;
+    color: #999;
+    background-color: #f9f9f9;
+}
+.footer__top .slogan {
+    font-size: .18rem;
+}
+.footer__link a {
+    display: inline-block;
+    margin-right: .4rem;
+    margin-bottom: .2rem;
+    flex-wrap: nowrap;
+    color: inherit;
+}
+.footer__link a:first-child {
+    color: #1d7ad9;
+}
+.footer__bottom {
+    font-size: .12rem;
+    line-height: .33rem;
+    color: #fff;
+    background-color: #1d7ad9;
+}
+
+/*中大屏特殊样式*/
+@media all and (min-width: 768px){
+
+    /*导航*/
+    .header__nav {
+        padding-top: .28rem;
+        padding-bottom: .28rem;
+    }
+    .navbar-nav .btn {
+        width: auto;
+        margin-left: .3rem;
+    }
+
+    /*流程图*/
+    .progress__group {
+        width: 6.33rem;
+        float: right;
+    }
+    .step__title li {
+        font-size: .16rem;
+    }
+
+    /*表单面板*/
+    .panel-body {
+        padding: .2rem .44rem;
+        font-size: .16rem;
+    }
+    .panel-body .form-inline .form-group {
+        margin-right: .6rem;
+    }
+    .form__panel .radio-text {
+        margin-top: .12rem;
+        margin-bottom: .12rem;
+    }
+}
+@media all and (min-width: 992px){
+    /*页脚*/
+    .footer__top .contact__code {
+        margin-top: -.05rem;
+        float: right;
+    }
+    .footer__top .contact__way {
+        float: right;
+        margin-right: .2rem;
+    }
+}
