@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 625%;
+}
+body {
+  font-size: .14rem;
+}
+$lightblue: #5fc0cd;
+$dackgray: #999;
+$lightred: #e26163;
+$white: #fff;
+$border: 1px solid #e1e5e7;
+@mixin container {
+  padding-left: .15rem;
+  padding-right: .15rem;
+}
+@mixin fixed ($top,$bottom) {
+  position: fixed;
+  top: $top;
+  left: 0;
+  right: 0;
+  bottom: $bottom;
+}
+@mixin v-center ($half-height) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-#{$half-height});
+}
+@mixin decorate-icon ($width,$height,$imgName) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: url("images/#{$imgName}.png") no-repeat 0 0;
+  background-size: cover;
+}
+@mixin btn ($direction,$b-color,$f-color,$border-color ) {
+  margin-#{$direction}: 2%;
+  background-color: $b-color;
+  color: $f-color;
+  border: solid 2px $border-color;
+}
+.header {
+  @include fixed(0,auto);
+  @include container;
+  text-align: center;
+  line-height: .44rem;
+  background-color: $lightblue;
+  .return {
+    float: left;
+    margin-top: .15rem;
+    @include decorate-icon(.1rem,.17rem,return);
+  }
+  .title {
+    font-size: .18rem;
+    font-weight: normal;
+    color: $white;
+  }
+}
+.main__top {
+  @include container;
+  height: 1.23rem;
+  margin-top: .44rem;
+  padding-top: .4rem;
+  color: $white;
+  background: url("images/background.png") no-repeat 0 0;
+  background-size: cover;
+  .portrait {
+    float: left;
+    width: .85rem;
+    height: .85rem;
+    overflow: hidden;
+    border-radius: .425rem;
+    text-align: center;
+    background-color: $white;
+    img {
+      margin-top: .08rem;
+      height: .85rem;
+    }
+  }
+  .personal{
+    margin-top: .19rem;
+    margin-left: 1.05rem;
+    .name {
+      margin-right: .1rem;
+      font-size: .18rem;
+    }
+    .location {
+      margin-top: .1rem;
+      font-size: .12rem;
+      .address {
+        margin-right: .05rem;
+        vertical-align: middle;
+        @include decorate-icon(.09rem,.12rem,address);
+      }
+    }
+  }
+}
+.main__bottom {
+  margin-bottom: 1rem;
+  .skill__title {
+    @include container;
+    font-size: .18rem;
+    line-height: .5rem;
+    border-bottom: $border;
+    span {
+      color: $lightblue;
+      font-weight: 900;
+    }
+  }
+  ul {
+    @include container;
+    list-style: none;
+    font-size: .16rem;
+  }
+  li {
+    border-bottom: $border;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
+    div {
+      display: inline-block;
+      padding-left: .13rem;
+      padding-right: .13rem;
+    }
+    .star {
+      margin-right: .05rem;
+      @include decorate-icon(.12rem,.12rem,star)
+    }
+    h5 {
+      @extend div;
+      font-size: .16rem;
+      font-weight: normal;
+      color: $dackgray;
+      border-right: $border;
+    }
+    .price {
+      color: $lightred;
+    }
+  }
+  .self-introduction {
+    position: relative;
+    .introduction__title {
+      @include v-center(0.1rem)
+    }
+    p {
+      margin-left: 1.1rem;
+      font-size: .14rem;
+    }
+  }
+}
+.footer {
+  @include fixed(auto,0);
+  @include container;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  background-color: $white;
+  button {
+    box-sizing: border-box;
+    width: 48%;
+    height:0.44rem;
+    border-radius: 5px;
+    font-size: 0.16rem;
+  }
+  .btn__message{
+    @include btn(right,$white,$lightblue,$lightblue)
+  }
+  .btn__tel{
+    @include btn(left,$lightblue,$white,$lightblue)
+  }
+}
