@@ -1,0 +1,142 @@
+/*
+---------------------------------
+Site: task13-3
+Author: XU
+Updated: 2017/12/8
+Updated by: XU
+---------------------------------
+*/
+/*Var color*/
+/*container with padding*/
+/*position*/
+/*float style*/
+/*background img*/
+/*title style*/
+/*list inline*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 625%; }
+
+body {
+  font-size: .12rem; }
+
+/*header*/
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+  z-index: 999;
+  line-height: .44rem;
+  background-color: #29bde0; }
+  .header .home {
+    display: inline-block;
+    width: 0.26rem;
+    height: 0.2rem;
+    background: url("../images/task7-4.png") no-repeat -0.75rem 0;
+    float: left;
+    margin-top: 0.13rem; }
+  .header .about {
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    background: url("../images/task7-4.png") no-repeat -0.5rem 0;
+    float: right;
+    margin-top: 0.13rem; }
+  .header .title {
+    font-weight: normal;
+    font-size: 0.18rem;
+    text-align: center;
+    color: #fff; }
+
+/*header end*/
+/*main*/
+.main {
+  position: fixed;
+  top: 0.44rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll; }
+  .main .main__top {
+    padding-left: 0.36rem;
+    padding-right: 0.36rem;
+    padding-top: .77rem;
+    padding-bottom: .1rem;
+    background: url("../images/task7-3.png") no-repeat center 0.12rem;
+    background-color: #29bde0; }
+    .main .main__top h4 {
+      font-weight: normal;
+      font-size: 0.24rem;
+      text-align: center;
+      color: #fff; }
+    .main .main__top .text__great {
+      margin-top: .12rem;
+      margin-bottom: .3rem;
+      font-size: .16rem;
+      color: #fbb435; }
+    .main .main__top .text, .main .main__top .text__role {
+      color: #fff;
+      line-height: .18rem; }
+    .main .main__top .text__role {
+      list-style: none; }
+      .main .main__top .text__role li {
+        display: inline-block; }
+      .main .main__top .text__role li {
+        width: .8rem; }
+  .main .main__bottom {
+    padding-bottom: .7rem; }
+    .main .main__bottom .event {
+      position: relative;
+      padding-left: 0.36rem;
+      padding-right: 0.36rem;
+      padding-bottom: .12rem;
+      border-bottom: 1px solid #ddd; }
+      .main .main__bottom .event .event__date {
+        font-size: .16rem;
+        font-weight: normal;
+        line-height: .3rem; }
+      .main .main__bottom .event p {
+        line-height: .2rem;
+        color: #a6a6a6; }
+      .main .main__bottom .event .event__time {
+        position: absolute;
+        top: 0.03rem;
+        right: 0.5rem;
+        bottom: auto;
+        left: auto; }
+
+/*main end*/
+.footer {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding-top: .12rem;
+  padding-bottom: .12rem;
+  text-align: center;
+  font-size: 0;
+  background-color: rgba(41, 189, 224, 0.5); }
+  .footer button {
+    width: 43%;
+    height: .43rem;
+    border-radius: .05rem;
+    border: none;
+    font-size: .2rem;
+    color: #fff;
+    outline: none; }
+  .footer .btn__again {
+    background-color: #f66f6f;
+    margin-right: 5%; }
+  .footer .btn__submit {
+    background-color: #fbb435; }
+
+/*# sourceMappingURL=task13-3.css.map */
