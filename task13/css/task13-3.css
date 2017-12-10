@@ -7,6 +7,7 @@ Updated by: XU
 ---------------------------------
 */
 /*Var color*/
+/*page width*/
 /*container with padding*/
 /*position*/
 /*float style*/
@@ -30,8 +31,11 @@ body {
   right: 0;
   bottom: auto;
   left: 0;
+  max-width: 640px;
+  margin: 0 auto;
   padding-left: 0.15rem;
   padding-right: 0.15rem;
+  box-sizing: border-box;
   z-index: 999;
   line-height: .44rem;
   background-color: #29bde0; }
@@ -58,12 +62,10 @@ body {
 /*header end*/
 /*main*/
 .main {
-  position: fixed;
-  top: 0.44rem;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow-y: scroll; }
+  max-width: 640px;
+  margin: 0 auto;
+  margin-top: .44rem;
+  height: 5rem; }
   .main .main__top {
     padding-left: 0.36rem;
     padding-right: 0.36rem;
@@ -119,20 +121,22 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  max-width: 640px;
+  margin: 0 auto;
   z-index: 100;
   padding-top: .12rem;
   padding-bottom: .12rem;
   text-align: center;
   font-size: 0;
   background-color: rgba(41, 189, 224, 0.5); }
-  .footer button {
+  .footer a {
+    display: inline-block;
     width: 43%;
-    height: .43rem;
+    line-height: .43rem;
     border-radius: .05rem;
-    border: none;
     font-size: .2rem;
-    color: #fff;
-    outline: none; }
+    text-decoration: none;
+    color: #fff; }
   .footer .btn__again {
     background-color: #f66f6f;
     margin-right: 5%; }

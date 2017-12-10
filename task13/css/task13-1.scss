@@ -17,6 +17,12 @@ $lightgray: #f0f0f0;
 /*Var border*/
 $border: 1px solid $gray;
 
+/*page width*/
+@mixin mobile-layout {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
 /*container with padding*/
 @mixin container {
   padding-left: .15rem;
@@ -40,9 +46,9 @@ $border: 1px solid $gray;
   background-color: #fff;
 }
 
-/*absolute position*/
-@mixin position ($top,$right,$bottom,$left) {
-  position: absolute;
+/*position*/
+@mixin position ($mode,$top,$right,$bottom,$left) {
+  position: $mode;
   top: $top;
   right: $right;
   bottom: $bottom;
@@ -58,11 +64,11 @@ html {
 }
 body {
   font-size: .14rem;
-  background-color: $lightgray;
 }
 
 /*header*/
 .header {
+  @include mobile-layout;
   @include container;
   height: .44rem;
   background-color: $lightblue;
@@ -75,7 +81,10 @@ body {
 
 /*main*/
 .main {
+  @include mobile-layout;
   @include container;
+  @include position(fixed, .44rem, 0, 0, 0);
+  background-color: $lightgray;
   .main__top {
     @include box-style;
     position: relative;
@@ -83,7 +92,7 @@ body {
     font-size: .17rem;
     color: $darkgray;
     .last {
-      @include position(.19rem,.07rem,auto,auto);
+      @include position(absolute, .19rem,.07rem,auto,auto);
       @include decorate-icon(.12rem,.2rem,task7-1,-.25rem,0)
     }
   }
@@ -98,15 +107,15 @@ body {
       font-weight: normal;
       color: $orange;
     }
-    button {
+    a {
+      display: inline-block;
       margin-top: .15rem;
       width: 80%;
-      height: .65rem;
-      border: none;
+      line-height: .65rem;
       font-size: .16rem;
+      text-decoration: none;
       color: #fff;
       background-color: $lightblue;
-      outline: none;
     }
     p {
       margin-top: .1rem;
@@ -127,7 +136,7 @@ body {
       }
     }
     .next {
-      @include position(1.85rem,.04rem,auto,auto);
+      @include position(absolute, 1.85rem,.04rem,auto,auto);
       @include decorate-icon(.14rem,.28rem,task7-1,-.5rem,0)
     }
   }
