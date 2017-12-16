@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+/*
+---------------------------------
+Site: task14
+Author: XU
+Updated: 2017/12/14
+Updated by: XU
+---------------------------------
+*/
+
+//import sass mixin
+@import "task14-mixin";
+@import "task14-color";
+
+html {
+  font-size: 625%;
+}
+
+body {
+  font-size: .14rem;
+}
+
+p,
+ul,
+ol{
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: .18rem;
+  color: inherit;
+}
+
+h5 {
+  font-size: .16rem;
+  font-weight: normal;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*clear float */
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/*container*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*set row*/
+.row {
+  display: block;
+  margin-left: -15px;
+  margin-right: -15px;
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+/*set column*/
+.col-sm-12-2,
+.col-sm-12-4,
+.col-md-10-1,
+.col-md-10-2,
+.col-md-12-3,
+.col-md-12-4,
+.col-lg-12-3,
+.col-md-12-8,
+.col-lg-12-9 {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media all and (min-width: 768px) {
+  .col-sm-12-2 {
+    @include col(12,2);
+  }
+  .col-sm-12-4 {
+    @include col(12,4);
+  }
+}
+
+@media all and (min-width: 992px) {
+  .col-md-10-1 {
+    @include col(10,1);
+  }
+  .col-md-10-2 {
+    @include col(10,2);
+  }
+  .col-md-12-3 {
+    @include col(12,3);
+  }
+  .col-md-12-4 {
+    @include col(12,4);
+  }
+  .col-md-12-8 {
+    @include col(12,8);
+  }
+}
+@media all and (min-width: 1200px) {
+  .col-lg-12-3 {
+    @include col(12,3);
+  }
+  .col-lg-12-9 {
+    @include col(12,9);
+  }
+}
+
+
+/*float*/
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+/*hidden*/
+.hidden-xs {
+  @media all and (max-width: 767px){
+    display: none;
+  }
+}
+
+/*text align*/
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+/*list style*/
+.list-unstyled {
+  list-style: none;
+}
+.list-inline {
+  &>li{display: inline-block;}
+}
+
+/*box shadow*/
+.box-shadow {
+  box-shadow: 0 0 .01rem .01rem $gray-shadow;
+}
+
+/*banner and carousel*/
+.banner {
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}
+.carousel {
+  position: relative;
+  .carousel-indicators {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    bottom: .2rem;
+    left: 0;
+    margin: auto;
+    li {
+      @extend .box-shadow;
+      width: .08rem;
+      height: .08rem;
+      border-radius: .04rem;
+      &.checked {
+        background-color: $gray;
+      }
+      & + li {
+        margin-left: .02rem;
+      }
+    }
+  }
+}

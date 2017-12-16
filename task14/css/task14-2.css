@@ -1,0 +1,94 @@
+/*main start*/
+.section__title {
+  margin: 0;
+  line-height: .8rem;
+  border-bottom: 1px solid #d0d6d9;
+  font-size: .16rem; }
+  .section__title .color-green {
+    color: #29b078; }
+
+.main__nav {
+  padding-top: .14rem;
+  padding-bottom: .14rem;
+  border-bottom: 1px solid #d0d6d9;
+  font-size: .16rem; }
+  .main__nav .navbar-text {
+    margin-right: .1rem;
+    line-height: .3rem; }
+  .main__nav a {
+    display: inline-block;
+    margin-right: .1rem;
+    padding: .06rem .1rem; }
+    .main__nav a.checked, .main__nav a:hover {
+      color: #fff;
+      background-color: #29b078; }
+
+.career {
+  margin-top: .48rem; }
+  .career .career__layout {
+    position: relative;
+    background-color: #fff; }
+    .career .career__layout:hover .career__explain {
+      display: block; }
+  .career .career__header {
+    padding: .2rem .1rem; }
+    .career .career__header .career__portrait {
+      display: inline-block;
+      width: 1.39rem;
+      height: 1.39rem;
+      background: url("../images/task8-2-portrait.png") no-repeat 0 0; }
+    .career .career__header .career__describe {
+      margin-left: 1.5rem;
+      word-wrap: break-word; }
+      .career .career__header .career__describe .career__title {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: 700; }
+  .career .career__table {
+    width: 100%;
+    font-size: .12rem;
+    border-top: 1px solid #d0d6d9; }
+    .career .career__table td {
+      padding: 0 .05rem;
+      border-bottom: 1px solid #d0d6d9; }
+    .career .career__table .icon-star {
+      display: inline-block;
+      width: 0.16rem;
+      height: 0.15rem;
+      background: url("../images/task14-star.png") no-repeat 0 0; }
+    .career .career__table .table__top--left {
+      width: 45%;
+      line-height: .4rem; }
+    .career .career__table .table__years {
+      line-height: .35rem; }
+    .career .career__table .table__top--left,
+    .career .career__table .table__salary {
+      border-right: 1px solid #edf1f2; }
+    .career .career__table .table__footer {
+      line-height: .38rem;
+      font-size: .14rem;
+      font-weight: 700;
+      color: #000; }
+  .career .career__tips {
+    font-size: .12rem;
+    padding: .1rem .05rem; }
+  .career .career__explain {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: .8rem .4rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8); }
+    .career .career__explain h5 {
+      margin-bottom: .4rem; }
+    .career .career__explain p {
+      text-indent: .2rem; }
+  .career .color-red {
+    color: #f00; }
+
+/*main end*/
+
+/*# sourceMappingURL=task14-2.css.map */
