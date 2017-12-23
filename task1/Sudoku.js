@@ -23,8 +23,9 @@ function randomColor(){
     }
     return "#"+r+g+b;
 }
-//创建0-8的随机数组函数
+//随机点亮九宫格中的三个格子
 function randomLight() {
+    //生成由数字0-8随机排列的9位数组
     var i;
     var index;
     var temp;
@@ -40,30 +41,39 @@ function randomLight() {
             arr[index] = temp;
         }
     }
+    //设置0-8中一个随机的格子亮随机颜色
     function er() {
-        var e = arr.pop();
+        var e = arr.pop();//取随机数组中的末位，数组长度减一
         document.getElementsByClassName("box")[e].style.backgroundColor=randomColor();
     }
+    //循环三次点亮三个不重复的随机格子
     for (i=0;i<3;i++) {
         er();
     }
 }
+//九宫格恢复初始颜色
+function Clear() {
+    var g =document.getElementsByClassName("box");
+    var i;
+    for (i = 0; i < g.length; i++) {
+        g[i].style.backgroundColor = "#fca401";
+    }
+}
+//闪烁一次
 function FlickerOne() {
     randomLight();
-    function Clear() {
-        var g =document.getElementsByClassName("box");
-        var i;
-        for (i = 0; i < g.length; i++) {
-            g[i].style.backgroundColor = "#fca401";
-        }
-    }
-    window.setTimeout(Clear,300);
+    window.setTimeout(Clear,500);
 }
+var h;
+//清除定时器
+function FlickerStop() {
+    window.clearInterval(h);
+}
+//清除定时器并重新使用定时器循环闪烁
 function Flicker() {
-    var h = window.setInterval(FlickerOne,600);
-    function FlickerStop() {
-        window.clearInterval(h);
-    }
-    document.getElementById("stop").onclick=FlickerStop;
+    FlickerStop(h);
+    h = window.setInterval(FlickerOne,1000);
 }
+document.getElementById("stop").onclick=FlickerStop;
 document.getElementById("start").onclick=Flicker;
+
