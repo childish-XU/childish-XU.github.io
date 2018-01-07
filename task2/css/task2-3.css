@@ -1,0 +1,192 @@
+/*
+---------------------------------
+Site: JS-task2-2
+Author: XU
+Updated: 2017/12/25
+Updated by: XU
+---------------------------------
+*/
+/*Var color*/
+/*page width*/
+/*container with padding*/
+/*background img*/
+/*box center*/
+/*box style*/
+/*list inline*/
+/*position*/
+/*float style*/
+/*title style*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 625%; }
+
+body {
+  font-size: .16rem; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+/*header*/
+.header {
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: .15rem;
+  padding-right: .15rem;
+  height: .44rem;
+  border-bottom: 1px solid #ddd;
+  line-height: .44rem;
+  text-align: center;
+  color: #fff;
+  background-color: #29bde0; }
+  .header .return {
+    display: inline-block;
+    width: 0.12rem;
+    height: 0.22rem;
+    background: url("../images/task2-3-btn.png") no-repeat 0 0;
+    float: left;
+    margin-top: .11rem;
+    background-size: .5rem .25rem; }
+  .header .close {
+    display: inline-block;
+    width: 0.18rem;
+    height: 0.18rem;
+    background: url("../images/task2-3-btn.png") no-repeat -0.25rem 0;
+    float: right;
+    margin-top: .13rem;
+    background-size: .5rem .25rem; }
+  .header .title {
+    font-size: .18rem;
+    font-weight: normal; }
+
+/*header end*/
+/*main*/
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: .15rem;
+  padding-right: .15rem;
+  position: fixed;
+  top: 0.44rem;
+  right: 0;
+  bottom: 0.84rem;
+  left: 0;
+  padding: .4rem .5rem;
+  text-align: center;
+  background-color: #29bde0; }
+  .main .card {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.5rem;
+    bottom: 0.4rem;
+    left: 0.5rem;
+    border: 2px solid #fff;
+    background-color: #ffedc5; }
+    .main .card .num {
+      position: absolute;
+      top: -0.2rem;
+      right: 0;
+      bottom: auto;
+      left: 0;
+      display: block;
+      margin: auto;
+      width: .4rem;
+      height: .4rem;
+      border-radius: .2rem;
+      border: 2px solid #ffedc5;
+      line-height: .4rem;
+      font-size: .2rem;
+      font-weight: bold;
+      color: #f56b81;
+      background-color: #fff; }
+    .main .card .img-emperor {
+      margin-top: .8rem;
+      width: 70%;
+      max-width: 2.4rem; }
+    .main .card .img-girl {
+      display: none;
+      margin-top: .5rem;
+      width: 50%;
+      max-width: 2rem; }
+    .main .card .identity {
+      line-height: .5rem;
+      font-size: .2rem;
+      font-weight: bold;
+      color: #29bde0; }
+
+.shade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  z-index: 999;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2); }
+  .shade .popup {
+    position: absolute;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    display: none;
+    box-shadow: 0 0 0.01rem 0.01rem #c9c9c9;
+    transform: translate(-1.2rem, -1.2rem);
+    border-radius: .1rem;
+    width: 2.4rem;
+    color: #787878;
+    background-color: #fff; }
+    .shade .popup .clue {
+      height: .8rem;
+      padding-left: .15rem;
+      padding-right: .15rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid #f0f0f0; }
+    .shade .popup .no,
+    .shade .popup .yes {
+      height: .4rem;
+      text-align: center; }
+    .shade .popup .no {
+      box-sizing: border-box;
+      border-right: 1px solid #f0f0f0; }
+
+/*main end*/
+/*footer*/
+.footer {
+  padding-left: .15rem;
+  padding-right: .15rem;
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: .1rem;
+  padding-bottom: .3rem;
+  text-align: center;
+  background-color: #29bde0; }
+  .footer .submit {
+    display: block;
+    width: 100%;
+    line-height: .44rem;
+    font-size: .2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #fbb435; }
+  .footer .hide {
+    display: none; }
+
+/*footer end*/
+
+/*# sourceMappingURL=task2-3.css.map */

@@ -1,0 +1,175 @@
+@import "task2-color";
+@import "task2-mixin";
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 625%;
+}
+body {
+  font-size: .14rem;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/*header*/
+.header {
+  @include position(fixed, 0, 0, auto, 0);
+  @include mobile-layout;
+  @include container;
+  z-index: 999;
+  height: .44rem;
+  border-bottom: 1px solid #ddd;
+  line-height: .44rem;
+  text-align: center;
+  color: #fff;
+  background-color: $lightblue;
+  .return {
+    @include decorate-icon(.12rem,.22rem,task2-3-btn,0,0);
+    float: left;
+    margin-top: .11rem;
+    background-size: .5rem .25rem;
+  }
+  .close {
+    @include decorate-icon(.18rem,.18rem,task2-3-btn,-.25rem,0);
+    float: right;
+    margin-top: .13rem;
+    background-size: .5rem .25rem;
+  }
+  .title {
+    font-size: .18rem;
+    font-weight: normal;
+  }
+}
+/*header end*/
+
+/*main*/
+.main {
+  @include mobile-layout;
+  @include container;
+  padding-top: .44rem;
+  padding-bottom: 1rem;
+  min-height: 6rem;
+  text-align: center;
+  background-color: $lightgray;
+  .date {
+    @include whiteBox;
+    line-height: .3rem;
+    color: $lightblue;
+  }
+  .schedule {
+    position: relative;
+    @include whiteBox;
+    padding-top: .2rem;
+    padding-bottom: .1rem;
+    .schedule__list {
+      list-style: none;
+      margin-left: .3rem;
+      margin-right: .2rem;
+      padding-left: .3rem;
+      border-left: 2px solid $gray;
+    }
+    .triangle--white {
+      @include position(absolute,-.1rem,50%,auto,auto);
+      transform: translateX(.1rem);
+      border-bottom: .12rem solid $white;
+      border-left: .1rem solid transparent;
+      border-right: .1rem solid transparent;
+    }
+    .list__item {
+      position: relative;
+      margin-bottom: .1rem;
+      line-height: .3rem;
+      color: $white;
+      background-color: $lightblue;
+      .triangle--blue {
+        @include position(absolute,.09rem,auto,auto,-.12rem);
+        border-right: .12rem solid $lightblue;
+        border-top: .06rem solid transparent;
+        border-bottom: .06rem solid transparent;
+        //border-color: $lightblue;
+      }
+      .moon {
+        @include position(absolute,0,auto,auto,-.45rem);
+        @include decorate-icon(.3rem,.3rem,task2-date,0,0);
+        background-size: 1rem .5rem;
+      }
+      .sun {
+        @include position(absolute,0,auto,auto,-.45rem);
+        @include decorate-icon(.3rem,.3rem,task2-date,-.5rem,0);
+        background-size: 1rem .5rem;
+      }
+    }
+    .list__hide {
+      display: none;
+      margin-bottom: .1rem;
+      text-align: left;
+      font-size: .12rem;
+    }
+  }
+}
+.shade {
+  @include position(fixed,0,0,0,0);
+  @include mobile-layout;
+  z-index: 999;
+  display: none;
+  background-color: rgba(0,0,0,.2);
+  .popup {
+    @include position(absolute,50%,auto,auto,50%);
+    display: none;
+    box-shadow: 0 0 .01rem .01rem $gray;
+    transform: translate(-1.2rem,-1.2rem);
+    border-radius: .1rem;
+    width: 2.4rem;
+    color: $darkgray;
+    background-color: $white;
+    .clue {
+      height: .8rem;
+      padding-left: .15rem;
+      padding-right: .15rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid $lightgray;
+    }
+    .no,
+    .yes {
+      height: .4rem;
+      text-align: center;
+    }
+    .no {
+      box-sizing: border-box;
+      border-right: 1px solid $lightgray;
+    }
+  }
+}
+/*main end*/
+
+/*footer start*/
+.footer {
+  @include position(fixed, auto, 0, 0, 0);
+  @include mobile-layout;
+  z-index: 100;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  text-align: center;
+  font-size: 0;
+  background-color: $transparent-blue;
+  a {
+    display: inline-block;
+    width: 43%;
+    line-height: .4rem;
+    border-radius: .05rem;
+    font-size: .2rem;
+    text-decoration: none;
+    color: $white;
+    background-color: $orange;
+  }
+  .btn__again {
+    margin-right: 5%;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>game-page1</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/task2-1.css">
+</head>
+<body>
+<header>
+    <div class="header">
+        <a class="menu" href="#"></a>
+    </div>
+</header>
+<main>
+    <div class="main">
+        <div class="main__top">
+            <p>上次游戏：杀人游戏简单版</p>
+            <a href="#"><span class="last"></span></a>
+        </div>
+        <div class="main__bottom">
+            <h4 class="title">杀人游戏</h4>
+            <a id="simple" href="#">简化版</a>
+            <p>有21个用户正在玩此游戏</p>
+            <a href="#">警版</a>
+            <p>有22个用户正在玩此游戏</p>
+            <a href="#">3.0版</a>
+            <p>有23个用户正在玩此游戏</p>
+            <ul class="carousel">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+</main>
+<script>
+    var oLink = document.getElementById("simple");
+    oLink.onclick = function Open() {
+        window.location.href= "task2-2.html";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/*
+---------------------------------
+Site: JS-task2-2
+Author: XU
+Updated: 2017/12/25
+Updated by: XU
+---------------------------------
+*/
+
+@import "task2-color";
+@import "task2-mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 625%;
+}
+body {
+  font-size: .16rem;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/*header*/
+.header {
+  @include mobile-layout;
+  @include container;
+  height: .44rem;
+  background-color: $lightblue;
+  .return {
+    @include decorate-icon(.12rem,.22rem,task2-3-btn,0,0);
+    margin-top: .11rem;
+    background-size: .5rem .25rem;
+  }
+}
+/*header end*/
+
+
+/*main*/
+.main {
+  @include mobile-layout;
+  @include container;
+  @include position(fixed, .44rem, 0, .44rem, 0);
+  background-color: $lightgray;
+  .title {
+    @include whiteBox;
+    text-align: center;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+  }
+  .group {
+    @include whiteBox;
+    padding-top: .2rem;
+    height: 1.6rem;
+    font-size: 0;
+    .group__civilian,
+    .group__killer {
+      display: inline-block;
+      width: 50%;
+      font-size: .16rem;
+      line-height: .3rem;
+    }
+    .civilian__img {
+      @include decorate-icon(.3rem,.3rem,task2-civilian,0,0);
+      float: left;
+      margin-left: 10%;
+      background-size: contain;
+    }
+    .killer__img {
+      @include decorate-icon(.3rem,.3rem,task2-killer,0,0);
+      float: left;
+      margin-left: 10%;
+      background-size: contain;
+    }
+    .civilian__num,
+    .killer__num {
+      display: inline-block;
+      width: .32rem;
+      color: $orange;
+    }
+  }
+  .word {
+    @include whiteBox;
+    height: .7rem;
+  }
+  .input {
+    @include whiteBox;
+    height: 1rem;
+    text-align: center;
+    .input__top {
+      padding-top: .1rem;
+      .input-box {
+        border: none;
+        width: .3rem;
+        height: .2rem;
+        vertical-align: top;
+        color: $orange;
+        text-align: center;
+        background-color: $lightgray;
+      }
+      .tips {
+        font-size: .12rem;
+        color: $orange;
+      }
+    }
+    .input__bottom {
+      padding: .2rem 15% .3rem 15%;
+      .bar {
+        position: relative;
+        height: .28rem;
+        .strip {
+          position: absolute;
+          top: .13rem;
+          width: 100%;
+          height: 2px;
+          background-color: $orange;
+          .slider {
+            @include decorate-icon(.46rem,.28rem,slider,-.5rem,0);
+            position: absolute;
+            top: -.13rem;
+            left: 0;
+          }
+        }
+      }
+      .bar-frame {
+        position: relative;
+        .add {
+          @include decorate-icon(.21rem,.21rem,slider,-1rem,0);
+          position: absolute;
+          top: .03rem;
+          right: -.3rem;
+          border: none;
+        }
+        .minus {
+          @include decorate-icon(.22rem,.21rem,slider,0,0);
+          position: absolute;
+          top: .03rem;
+          left: -.3rem;
+          border: none;
+        }
+      }
+    }
+  }
+}
+/*main end*/
+
+
+/*footer*/
+.footer {
+  @include container;
+  @include position(fixed, auto, 0, 0, 0);
+  @include mobile-layout;
+  padding-top: .1rem;
+  padding-bottom: .3rem;
+  text-align: center;
+  background-color: $lightgray;
+  .submit {
+    display: inline-block;
+    width: 100%;
+    line-height: .44rem;
+    font-size: .2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: $orange;
+  }
+}
+/*footer end*/

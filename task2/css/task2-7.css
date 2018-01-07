@@ -1,0 +1,148 @@
+/*
+---------------------------------
+Site: task13-3
+Author: XU
+Updated: 2017/12/8
+Updated by: XU
+---------------------------------
+*/
+/*Var color*/
+/*page width*/
+/*container with padding*/
+/*background img*/
+/*box center*/
+/*box style*/
+/*list inline*/
+/*position*/
+/*float style*/
+/*title style*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 625%; }
+
+body {
+  font-size: .12rem; }
+
+/*header*/
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: .15rem;
+  padding-right: .15rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  color: #fff;
+  z-index: 999;
+  line-height: .44rem;
+  background-color: #29bde0; }
+  .header .home {
+    display: inline-block;
+    width: 0.26rem;
+    height: 0.2rem;
+    background: url("../images/task2-4.png") no-repeat -0.75rem 0;
+    float: left;
+    margin-top: 0.13rem; }
+  .header .about {
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    background: url("../images/task2-4.png") no-repeat -0.5rem 0;
+    float: right;
+    margin-top: 0.13rem; }
+  .header .title {
+    font-size: .18rem;
+    font-weight: normal; }
+
+/*header end*/
+/*main*/
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: .44rem;
+  min-height: 5rem; }
+  .main .main__top {
+    padding-left: .15rem;
+    padding-right: .15rem;
+    padding: .82rem .36rem .1rem .36rem;
+    color: #fff;
+    background: url("../images/task2-3.png") no-repeat center 0.12rem;
+    background-color: #29bde0; }
+    .main .main__top h4 {
+      font-size: .2rem;
+      font-weight: normal;
+      text-align: center; }
+    .main .main__top .text {
+      margin-top: .3rem;
+      line-height: .5rem; }
+    .main .main__top .text__role {
+      list-style: none; }
+      .main .main__top .text__role li {
+        display: inline-block; }
+      .main .main__top .text__role li {
+        width: .8rem; }
+  .main .main__bottom {
+    padding-bottom: 1rem;
+    min-height: 3rem;
+    background-color: #fff; }
+    .main .main__bottom .event {
+      position: relative;
+      padding-left: .15rem;
+      padding-right: .15rem;
+      padding: 0 .36rem .12rem .36rem;
+      border-bottom: 1px solid #f0f0f0; }
+      .main .main__bottom .event .event__date {
+        font-size: .16rem;
+        font-weight: normal;
+        line-height: .3rem; }
+      .main .main__bottom .event p {
+        line-height: .2rem;
+        color: #c9c9c9; }
+      .main .main__bottom .event .event__time {
+        position: absolute;
+        top: 0.03rem;
+        right: 0.5rem;
+        bottom: auto;
+        left: auto; }
+
+/*main end*/
+.footer {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  z-index: 100;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  text-align: center;
+  font-size: 0;
+  background-color: rgba(41, 189, 224, 0.5); }
+  .footer a {
+    display: inline-block;
+    width: 43%;
+    line-height: .4rem;
+    border-radius: .05rem;
+    font-size: .2rem;
+    text-decoration: none;
+    color: #fff; }
+  .footer .btn__again {
+    background-color: #f66f6f;
+    margin-right: 5%; }
+  .footer .btn__submit {
+    background-color: #fbb435; }
+
+/*# sourceMappingURL=task2-7.css.map */

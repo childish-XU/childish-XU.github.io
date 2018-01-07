@@ -1,0 +1,218 @@
+/*Var color*/
+/*page width*/
+/*container with padding*/
+/*background img*/
+/*box center*/
+/*box style*/
+/*list inline*/
+/*position*/
+/*float style*/
+/*title style*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 625%; }
+
+body {
+  font-size: .14rem; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+/*header*/
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: .15rem;
+  padding-right: .15rem;
+  z-index: 999;
+  height: .44rem;
+  border-bottom: 1px solid #ddd;
+  line-height: .44rem;
+  text-align: center;
+  color: #fff;
+  background-color: #29bde0; }
+  .header .return {
+    display: inline-block;
+    width: 0.12rem;
+    height: 0.22rem;
+    background: url("../images/task2-3-btn.png") no-repeat 0 0;
+    float: left;
+    margin-top: .11rem;
+    background-size: .5rem .25rem; }
+  .header .close {
+    display: inline-block;
+    width: 0.18rem;
+    height: 0.18rem;
+    background: url("../images/task2-3-btn.png") no-repeat -0.25rem 0;
+    float: right;
+    margin-top: .13rem;
+    background-size: .5rem .25rem; }
+  .header .title {
+    font-size: .18rem;
+    font-weight: normal; }
+
+/*header end*/
+/*main*/
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: .15rem;
+  padding-right: .15rem;
+  padding-top: .44rem;
+  padding-bottom: 1rem;
+  min-height: 6rem;
+  text-align: center;
+  background-color: #f0f0f0; }
+  .main .date {
+    margin-top: .05rem;
+    background-color: #fff;
+    box-shadow: .02rem .02rem .01rem .01rem #c9c9c9;
+    line-height: .3rem;
+    color: #29bde0; }
+  .main .schedule {
+    position: relative;
+    margin-top: .05rem;
+    background-color: #fff;
+    box-shadow: .02rem .02rem .01rem .01rem #c9c9c9;
+    padding-top: .2rem;
+    padding-bottom: .1rem; }
+    .main .schedule .schedule__list {
+      list-style: none;
+      margin-left: .3rem;
+      margin-right: .2rem;
+      padding-left: .3rem;
+      border-left: 2px solid #c9c9c9; }
+    .main .schedule .triangle--white {
+      position: absolute;
+      top: -0.1rem;
+      right: 50%;
+      bottom: auto;
+      left: auto;
+      transform: translateX(0.1rem);
+      border-bottom: 0.12rem solid #fff;
+      border-left: .1rem solid transparent;
+      border-right: .1rem solid transparent; }
+    .main .schedule .list__item {
+      position: relative;
+      margin-bottom: .1rem;
+      line-height: .3rem;
+      color: #fff;
+      background-color: #29bde0; }
+      .main .schedule .list__item .triangle--blue {
+        position: absolute;
+        top: 0.09rem;
+        right: auto;
+        bottom: auto;
+        left: -0.12rem;
+        border-right: 0.12rem solid #29bde0;
+        border-top: .06rem solid transparent;
+        border-bottom: .06rem solid transparent; }
+      .main .schedule .list__item .moon {
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: -0.45rem;
+        display: inline-block;
+        width: 0.3rem;
+        height: 0.3rem;
+        background: url("../images/task2-date.png") no-repeat 0 0;
+        background-size: 1rem .5rem; }
+      .main .schedule .list__item .sun {
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: -0.45rem;
+        display: inline-block;
+        width: 0.3rem;
+        height: 0.3rem;
+        background: url("../images/task2-date.png") no-repeat -0.5rem 0;
+        background-size: 1rem .5rem; }
+    .main .schedule .list__hide {
+      display: none;
+      margin-bottom: .1rem;
+      text-align: left;
+      font-size: .12rem; }
+
+.shade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  z-index: 999;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2); }
+  .shade .popup {
+    position: absolute;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    display: none;
+    box-shadow: 0 0 0.01rem 0.01rem #c9c9c9;
+    transform: translate(-1.2rem, -1.2rem);
+    border-radius: .1rem;
+    width: 2.4rem;
+    color: #787878;
+    background-color: #fff; }
+    .shade .popup .clue {
+      height: .8rem;
+      padding-left: .15rem;
+      padding-right: .15rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid #f0f0f0; }
+    .shade .popup .no,
+    .shade .popup .yes {
+      height: .4rem;
+      text-align: center; }
+    .shade .popup .no {
+      box-sizing: border-box;
+      border-right: 1px solid #f0f0f0; }
+
+/*main end*/
+/*footer start*/
+.footer {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  z-index: 100;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  text-align: center;
+  font-size: 0;
+  background-color: rgba(41, 189, 224, 0.5); }
+  .footer a {
+    display: inline-block;
+    width: 43%;
+    line-height: .4rem;
+    border-radius: .05rem;
+    font-size: .2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #fbb435; }
+  .footer .btn__again {
+    margin-right: 5%; }
+
+/*# sourceMappingURL=task2-5.css.map */

@@ -1,0 +1,103 @@
+/*
+---------------------------------
+Site: task13-1
+Author: XU
+Updated: 2017/12/6
+Updated by: XU
+---------------------------------
+*/
+
+@import "task2-color";
+@import "task2-mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 625%;
+}
+body {
+  font-size: .14rem;
+}
+
+/*header*/
+.header {
+  @include mobile-layout;
+  @include container;
+  height: .44rem;
+  background-color: $lightblue;
+  .menu {
+    @include decorate-icon(.17rem,.14rem,task2-1,0,0);
+    margin-top: .2rem;
+  }
+}
+/*header end*/
+
+/*main*/
+.main {
+  @include mobile-layout;
+  @include container;
+  @include position(fixed, .44rem, 0, 0, 0);
+  background-color: $lightgray;
+  .main__top {
+    @include box-style;
+    position: relative;
+    line-height: .59rem;
+    font-size: .17rem;
+    color: $darkgray;
+    .last {
+      @include position(absolute, .19rem,.07rem,auto,auto);
+      @include decorate-icon(.12rem,.2rem,task2-1,-.25rem,0)
+    }
+  }
+  .main__bottom {
+    @include box-style;
+    position: relative;
+    padding-bottom: .05rem;
+    .title {
+      line-height: .45rem;
+      border-bottom: 1px solid $orange;
+      font-size: .18rem;
+      font-weight: normal;
+      color: $orange;
+    }
+    a {
+      display: inline-block;
+      margin-top: .15rem;
+      width: 80%;
+      line-height: .65rem;
+      font-size: .16rem;
+      text-decoration: none;
+      color: #fff;
+      background-color: $lightblue;
+    }
+    p {
+      margin-top: .1rem;
+      font-size: .12rem;
+      color: darkgray;
+    }
+    .carousel {
+      list-style: none;
+      li {
+        display: inline-block;
+        width: .09rem;
+        height: .09rem;
+        border-radius: .045rem;
+        background-color: $lightgray;
+      }
+      li:nth-child(2) {
+        background-color: $lightblue;
+      }
+    }
+    .prev {
+      @include position(absolute, 1.85rem,auto,auto,.04rem);
+      @include decorate-icon(.14rem,.28rem,task2-5,-.25rem,0)
+    }
+    .next {
+      @include position(absolute, 1.85rem,.04rem,auto,auto);
+      @include decorate-icon(.14rem,.28rem,task2-1,-.5rem,0)
+    }
+  }
+}
+/*main end*/

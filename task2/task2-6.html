@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game-page6</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/task2-6.css">
+</head>
+<body>
+<header>
+    <div class="header">
+        <div class="header__top">
+            <a class="menu" href="#"></a>
+            <a class="close" href="#"></a>
+            <h4 class="title">杀手杀人</h4>
+        </div>
+        <div class="header__bottom">
+            <span class="play"></span>
+            <p class="message">杀手请睁眼，杀手请选择要杀的对象</p>
+            <span class="speak"></span>
+        </div>
+    </div>
+</header>
+<main>
+    <div id="main" class="main clearfix">
+        <p class="guide">点击下方玩家头像，对被杀的玩家进行标记</p>
+        <div class="frame">
+            <div class="card">
+                <div class="knife"></div>
+                <p class="name"></p>
+                <p class="number"><span class="num"></span>号</p>
+            </div>
+        </div>
+    </div>
+    <div class="shade">
+        <table class="popup" cellpadding="0">
+            <tr>
+                <td class="clue" colspan="2"><p>待定</p></td>
+            </tr>
+            <tr>
+                <td class="no">取消</td>
+                <td class="yes">确认</td>
+            </tr>
+        </table>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <a id="submit" class="submit" href="javascript:">确定</a>
+    </div>
+</footer>
+</body>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/state-machine.js"></script>
+<script src="js/task2-6.js"></script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game-page3</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/task2-3.css">
+</head>
+<body>
+<header>
+    <div class="header">
+        <a class="return" href="task2-2.html"></a>
+        <a class="close" href="javascript:"></a>
+        <h4 class="title">查看身份</h4>
+    </div>
+</header>
+<main>
+    <div class="main">
+        <div class="card">
+            <span id="num" class="num">0</span>
+            <img id="emperor" class="img-emperor" src="images/task2-3-emperor.png">
+            <img id="girl" class="img-girl" src="images/task2-3-girl.png">
+            <p id="identity" class="identity"></p>
+        </div>
+    </div>
+    <div class="shade">
+        <table class="popup" cellpadding="0">
+            <tr>
+                <td class="clue" colspan="2"><p>待定</p></td>
+            </tr>
+            <tr>
+                <td class="no">取消</td>
+                <td class="yes">确认</td>
+            </tr>
+        </table>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <a id="submit-show" class="submit" href="javascript:">查看<span id="btn-num1"></span>号身份</a>
+        <a id="submit-hide" class="submit hide" href="javascript:">隐藏并传递给<span id="btn-num2"></span>号</a>
+        <a id="submit-judge" class="submit hide" href="javascript:">法官查看</a>
+    </div>
+</footer>
+</body>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/task2-3.js"></script>
+</html>

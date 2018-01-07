@@ -1,0 +1,76 @@
+/*page width*/
+@mixin mobile-layout {
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/*container with padding*/
+@mixin container {
+  padding-left: .15rem;
+  padding-right: .15rem;
+}
+
+/*background img*/
+@mixin decorate-icon ($width,$height,$imgName,$x,$y) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: url("../images/#{$imgName}.png") no-repeat $x $y;
+}
+
+/*box center*/
+@mixin box-center ($width, $height) {
+  position: absolute;
+  width: $width;
+  height: $height;
+  top: 50%;
+  left: 50%;
+  transform: translate(-$width/2, -$height/2);
+}
+
+/*box style*/
+@mixin box-style {
+  margin-top: .13rem;
+  border: 1px solid #c9c9c9;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #fff;
+}
+
+/*list inline*/
+@mixin list-inline {
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+
+/*position*/
+@mixin position ($mode,$top,$right,$bottom,$left) {
+  position: $mode;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/*float style*/
+@mixin float ($direction,$length) {
+  float: $direction;
+  margin-top: $length;
+}
+
+@mixin whiteBox {
+  margin-top: .05rem;
+  background-color: #fff;
+  box-shadow: .02rem .02rem .01rem .01rem #c9c9c9;
+}
+
+/*title style*/
+@mixin title ($size) {
+  font-weight: normal;
+  font-size: $size;
+  text-align: center;
+  color: #fff;
+}

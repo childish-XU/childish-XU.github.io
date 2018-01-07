@@ -1,0 +1,162 @@
+/*
+---------------------------------
+Site: JS-task2-2
+Author: XU
+Updated: 2017/12/25
+Updated by: XU
+---------------------------------
+*/
+
+@import "task2-color";
+@import "task2-mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 625%;
+}
+body {
+  font-size: .16rem;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/*header*/
+.header {
+  @include mobile-layout;
+  @include container;
+  height: .44rem;
+  border-bottom: 1px solid #ddd;
+  line-height: .44rem;
+  text-align: center;
+  color: #fff;
+  background-color: $lightblue;
+  .return {
+    @include decorate-icon(.12rem,.22rem,task2-3-btn,0,0);
+    float: left;
+    margin-top: .11rem;
+    background-size: .5rem .25rem;
+  }
+  .close {
+    @include decorate-icon(.18rem,.18rem,task2-3-btn,-.25rem,0);
+    float: right;
+    margin-top: .13rem;
+    background-size: .5rem .25rem;
+  }
+  .title {
+    font-size: .18rem;
+    font-weight: normal;
+  }
+}
+/*header end*/
+
+
+/*main*/
+.main {
+  @include mobile-layout;
+  @include container;
+  @include position(fixed, .44rem, 0, .84rem, 0);
+  padding: .4rem .5rem;
+  text-align: center;
+  background-color: $lightblue;
+  .card {
+    @include position(absolute, .4rem, .5rem, .4rem, .5rem);
+    border: 2px solid #fff;
+    background-color: $pink;
+    .num {
+      @include position(absolute, -.2rem, 0, auto, 0);
+      display: block;
+      margin: auto;
+      width: .4rem;
+      height: .4rem;
+      border-radius: .2rem;
+      border: 2px solid $pink;
+      line-height: .4rem;
+      font-size: .2rem;
+      font-weight: bold;
+      color: #f56b81;
+      background-color: #fff;
+    }
+    .img-emperor {
+      margin-top: .8rem;
+      width: 70%;
+      max-width: 2.4rem;
+    }
+    .img-girl{
+      display: none;
+      margin-top: .5rem;
+      width: 50%;
+      max-width: 2rem;
+    }
+    .identity {
+      line-height: .5rem;
+      font-size: .2rem;
+      font-weight: bold;
+      color: $lightblue;
+    }
+  }
+}
+.shade {
+  @include position(fixed,0,0,0,0);
+  @include mobile-layout;
+  z-index: 999;
+  display: none;
+  background-color: rgba(0,0,0,.2);
+  .popup {
+    @include position(absolute,50%,auto,auto,50%);
+    display: none;
+    box-shadow: 0 0 .01rem .01rem $gray;
+    transform: translate(-1.2rem,-1.2rem);
+    border-radius: .1rem;
+    width: 2.4rem;
+    color: $darkgray;
+    background-color: $white;
+    .clue {
+      height: .8rem;
+      padding-left: .15rem;
+      padding-right: .15rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid $lightgray;
+    }
+    .no,
+    .yes {
+      height: .4rem;
+      text-align: center;
+    }
+    .no {
+      box-sizing: border-box;
+      border-right: 1px solid $lightgray;
+    }
+  }
+}
+/*main end*/
+
+
+/*footer*/
+.footer {
+  @include container;
+  @include position(fixed, auto, 0, 0, 0);
+  @include mobile-layout;
+  padding-top: .1rem;
+  padding-bottom: .3rem;
+  text-align: center;
+  background-color: $lightblue;
+  .submit{
+    display: block;
+    width: 100%;
+    line-height: .44rem;
+    font-size: .2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: $orange;
+  }
+  .hide {
+    display: none;
+  }
+}
+/*footer end*/

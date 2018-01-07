@@ -1,0 +1,129 @@
+/*
+---------------------------------
+Site: task13-3
+Author: XU
+Updated: 2017/12/8
+Updated by: XU
+---------------------------------
+*/
+
+@import "task2-color";
+@import "task2-mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 625%;
+}
+body {
+  font-size: .12rem;
+}
+
+/*header*/
+.header {
+  @include position(fixed, 0, 0, auto, 0);
+  @include mobile-layout;
+  @include container;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  color: $white;
+  z-index: 999;
+  line-height: .44rem;
+  background-color: $lightblue;
+  .home {
+    @include decorate-icon(.26rem, .2rem, task2-4, -.75rem, 0);
+    @include float(left, .13rem);
+  }
+  .about {
+    @include decorate-icon(.2rem, .2rem, task2-4, -.5rem, 0);
+    @include float(right, .13rem);
+  }
+  .title {
+    font-size: .18rem;
+    font-weight: normal;
+  }
+}
+/*header end*/
+
+/*main*/
+.main {
+  @include mobile-layout;
+  margin-top: .44rem;
+  min-height: 5rem;
+  .main__top {
+    @include container;
+    padding: .82rem .36rem .1rem .36rem;
+    color: $white;
+    background: url("../images/task2-3.png") no-repeat center .12rem;
+    background-color: $lightblue;
+    h4 {
+      font-size: .2rem;
+      font-weight: normal;
+      text-align: center;
+    }
+    .text{
+      margin-top: .3rem;
+      line-height: .5rem;
+    }
+    .text__role {
+      @include list-inline;
+      li {
+        width: .8rem;
+      }
+    }
+  }
+  .main__bottom {
+    padding-bottom: 1rem;
+    min-height: 3rem;
+    background-color: $white;
+    .event {
+      position: relative;
+      @include container;
+      padding: 0 .36rem .12rem .36rem;
+      border-bottom: 1px solid $lightgray;
+      .event__date {
+        font-size: .16rem;
+        font-weight: normal;
+        line-height: .3rem;
+      }
+      p {
+        line-height: .2rem;
+        color: $gray;
+      }
+      .event__time {
+        @include position(absolute, .03rem, .5rem, auto, auto)
+      }
+    }
+  }
+}
+/*main end*/
+
+.footer {
+  @include position(fixed, auto, 0, 0, 0);
+  @include mobile-layout;
+  z-index: 100;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  text-align: center;
+  font-size: 0;
+  background-color: $transparent-blue;
+  a {
+    display: inline-block;
+    width: 43%;
+    line-height: .4rem;
+    border-radius: .05rem;
+    font-size: .2rem;
+    text-decoration: none;
+    color: $white;
+  }
+  .btn__again {
+    background-color: $lightred;
+    margin-right: 5%;
+  }
+  .btn__submit {
+    background-color: $orange;
+  }
+}

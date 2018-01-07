@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game-page2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/task2-2.css">
+</head>
+<body>
+<header>
+    <div class="header">
+        <a class="return" href="task2-1.html"></a>
+    </div>
+</header>
+<main>
+    <div class="main">
+        <h3 class="title">玩家配比</h3>
+        <div class="group">
+            <div class="group__civilian clearfix"><span class="killer__img"></span><p>杀手<span id="killer" class="civilian__num"></span>人</p></div>
+            <div class="group__killer clearfix"><span class="civilian__img"></span><p>平民<span id="civilian" class="killer__num"></span>人</p></div>
+        </div>
+        <div class="word"></div>
+        <div class="input">
+            <div class="input__top">
+                <span>请输入玩家数量</span>
+                <input id="num" class="input-box" type="text">
+                <label for="num"></label>
+                <span class="tips">玩家数量为4-18</span>
+            </div>
+            <div class="input__bottom">
+                <div class="bar-frame">
+                    <div id="bar" class="bar">
+                        <div class="strip">
+                            <span id="slider" class="slider"></span>
+                        </div>
+                    </div>
+                    <button id="add" class="add"></button>
+                    <button id="minus" class="minus"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <a id="submit" class="submit" href="javascript:">去发牌</a>
+    </div>
+</footer>
+<script src="js/task2-2.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+/*
+---------------------------------
+Site: JS-task2-2
+Author: XU
+Updated: 2017/12/25
+Updated by: XU
+---------------------------------
+*/
+/*Var color*/
+/*page width*/
+/*container with padding*/
+/*background img*/
+/*box center*/
+/*box style*/
+/*list inline*/
+/*position*/
+/*float style*/
+/*title style*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 625%; }
+
+body {
+  font-size: .16rem; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+/*header*/
+.header {
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: .15rem;
+  padding-right: .15rem;
+  height: .44rem;
+  background-color: #29bde0; }
+  .header .return {
+    display: inline-block;
+    width: 0.12rem;
+    height: 0.22rem;
+    background: url("../images/task2-3-btn.png") no-repeat 0 0;
+    margin-top: .11rem;
+    background-size: .5rem .25rem; }
+
+/*header end*/
+/*main*/
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: .15rem;
+  padding-right: .15rem;
+  position: fixed;
+  top: 0.44rem;
+  right: 0;
+  bottom: 0.44rem;
+  left: 0;
+  background-color: #f0f0f0; }
+  .main .title {
+    margin-top: .05rem;
+    background-color: #fff;
+    box-shadow: .02rem .02rem .01rem .01rem #c9c9c9;
+    text-align: center;
+    padding-top: .1rem;
+    padding-bottom: .1rem; }
+  .main .group {
+    margin-top: .05rem;
+    background-color: #fff;
+    box-shadow: .02rem .02rem .01rem .01rem #c9c9c9;
+    padding-top: .2rem;
+    height: 1.6rem;
+    font-size: 0; }
+    .main .group .group__civilian,
+    .main .group .group__killer {
+      display: inline-block;
+      width: 50%;
+      font-size: .16rem;
+      line-height: .3rem; }
+    .main .group .civilian__img {
+      display: inline-block;
+      width: 0.3rem;
+      height: 0.3rem;
+      background: url("../images/task2-civilian.png") no-repeat 0 0;
+      float: left;
+      margin-left: 10%;
+      background-size: contain; }
+    .main .group .killer__img {
+      display: inline-block;
+      width: 0.3rem;
+      height: 0.3rem;
+      background: url("../images/task2-killer.png") no-repeat 0 0;
+      float: left;
+      margin-left: 10%;
+      background-size: contain; }
+    .main .group .civilian__num,
+    .main .group .killer__num {
+      display: inline-block;
+      width: .32rem;
+      color: #fbb435; }
+  .main .word {
+    margin-top: .05rem;
+    background-color: #fff;
+    box-shadow: .02rem .02rem .01rem .01rem #c9c9c9;
+    height: .7rem; }
+  .main .input {
+    margin-top: .05rem;
+    background-color: #fff;
+    box-shadow: .02rem .02rem .01rem .01rem #c9c9c9;
+    height: 1rem;
+    text-align: center; }
+    .main .input .input__top {
+      padding-top: .1rem; }
+      .main .input .input__top .input-box {
+        border: none;
+        width: .3rem;
+        height: .2rem;
+        vertical-align: top;
+        color: #fbb435;
+        text-align: center;
+        background-color: #f0f0f0; }
+      .main .input .input__top .tips {
+        font-size: .12rem;
+        color: #fbb435; }
+    .main .input .input__bottom {
+      padding: .2rem 15% .3rem 15%; }
+      .main .input .input__bottom .bar {
+        position: relative;
+        height: .28rem; }
+        .main .input .input__bottom .bar .strip {
+          position: absolute;
+          top: .13rem;
+          width: 100%;
+          height: 2px;
+          background-color: #fbb435; }
+          .main .input .input__bottom .bar .strip .slider {
+            display: inline-block;
+            width: 0.46rem;
+            height: 0.28rem;
+            background: url("../images/slider.png") no-repeat -0.5rem 0;
+            position: absolute;
+            top: -.13rem;
+            left: 0; }
+      .main .input .input__bottom .bar-frame {
+        position: relative; }
+        .main .input .input__bottom .bar-frame .add {
+          display: inline-block;
+          width: 0.21rem;
+          height: 0.21rem;
+          background: url("../images/slider.png") no-repeat -1rem 0;
+          position: absolute;
+          top: .03rem;
+          right: -.3rem;
+          border: none; }
+        .main .input .input__bottom .bar-frame .minus {
+          display: inline-block;
+          width: 0.22rem;
+          height: 0.21rem;
+          background: url("../images/slider.png") no-repeat 0 0;
+          position: absolute;
+          top: .03rem;
+          left: -.3rem;
+          border: none; }
+
+/*main end*/
+/*footer*/
+.footer {
+  padding-left: .15rem;
+  padding-right: .15rem;
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: .1rem;
+  padding-bottom: .3rem;
+  text-align: center;
+  background-color: #f0f0f0; }
+  .footer .submit {
+    display: inline-block;
+    width: 100%;
+    line-height: .44rem;
+    font-size: .2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #fbb435; }
+
+/*footer end*/
+
+/*# sourceMappingURL=task2-2.css.map */
