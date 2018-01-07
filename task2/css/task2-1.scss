@@ -25,6 +25,7 @@ body {
 .header {
   @include mobile-layout;
   @include container;
+  @include position(fixed, 0, 0, auto, 0);
   height: .44rem;
   background-color: $lightblue;
   .menu {

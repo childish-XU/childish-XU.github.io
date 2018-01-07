@@ -33,6 +33,11 @@ body {
   box-sizing: border-box;
   padding-left: .15rem;
   padding-right: .15rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
   height: .44rem;
   background-color: #29bde0; }
   .header .menu {

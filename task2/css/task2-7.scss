@@ -52,7 +52,7 @@ body {
 .main {
   @include mobile-layout;
   margin-top: .44rem;
-  min-height: 5rem;
+  min-height: 6rem;
   .main__top {
     @include container;
     padding: .82rem .36rem .1rem .36rem;
