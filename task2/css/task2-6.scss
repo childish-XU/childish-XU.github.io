@@ -28,15 +28,13 @@ body {
     text-align: center;
     color: #fff;
     background-color: $lightblue;
-    .menu {
-      @include decorate-icon(.2rem, .2rem, task2-4, 0, 0);
-      @include float(left, .13rem);
-    }
     .close {
       @include decorate-icon(.18rem, .2rem, task2-4, -.25rem, 0);
       @include float(right, .13rem);
     }
     .title {
+      margin-left: .2rem;
+      margin-right: .2rem;
       font-size: .18rem;
       font-weight: normal;
     }

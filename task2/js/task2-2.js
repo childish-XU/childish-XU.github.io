@@ -14,10 +14,12 @@ Linkage();  //调用函数使滑块位置根据输入值改变
 //设置输入框输入值的范围
 oInput.onblur = function Set () {
     oNum = oInput.value;
-    if (oNum>18) {
-        alert("请输入正确的玩家数量");
+    if(isNaN(oNum)){
+        popup();
+    }else if (oNum>18) {
+        popup();
     }else if(oNum<4) {
-        alert("请输入正确的玩家数量");
+        popup();
     }else {
         Linkage();
     }
@@ -115,6 +117,28 @@ function Linkage() {
     oC.innerHTML = Math.floor(oNum * 0.8);
 }
 
+function popup() {
+    $(".shade").show();
+    $(".clue p").html("请输入正确的玩家数量");
+    $(".popup").fadeIn(100);
+}
+$(".no").click(function() {
+    popupHide();
+    oInput.value = 12;
+    oNum = oInput.value;
+    Linkage();
+});
+$(".yes").click(function () {
+    popupHide();
+    oInput.value = 12;
+    oNum = oInput.value;
+    Linkage();
+});
+function popupHide(){
+    $(".shade").hide();
+    $(".popup").hide();
+}
+
 //获取元素的绝对位置
 function getPosition(node) {
     var left = node.offsetLeft; //获取元素相对于其父元素的left值var left
@@ -154,9 +178,16 @@ oBtn.onclick = function Open() {
             arr_id[j] = temp;
         }
     }
-    localStorage.setItem("killer",nK);
-    localStorage.setItem("identity",arr_id);
+    //用json格式存入后续页面用到的数据
+    var data = {
+        "step": 0,
+        "arr_id":arr_id,
+        "arrD": []
+    };
     localStorage.removeItem("playDate");
+    localStorage.setItem("killer",nK);
+    //存入序列化的json字符串
+    localStorage.setItem("playDate",JSON.stringify(data));
     window.location.href= "task2-3.html";
 };
 

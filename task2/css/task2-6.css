@@ -41,13 +41,6 @@ body {
     text-align: center;
     color: #fff;
     background-color: #29bde0; }
-    .header .header__top .menu {
-      display: inline-block;
-      width: 0.2rem;
-      height: 0.2rem;
-      background: url("../images/task2-4.png") no-repeat 0 0;
-      float: left;
-      margin-top: 0.13rem; }
     .header .header__top .close {
       display: inline-block;
       width: 0.18rem;
@@ -56,6 +49,8 @@ body {
       float: right;
       margin-top: 0.13rem; }
     .header .header__top .title {
+      margin-left: .2rem;
+      margin-right: .2rem;
       font-size: .18rem;
       font-weight: normal; }
   .header .header__bottom {

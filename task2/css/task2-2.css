@@ -102,6 +102,7 @@ body {
     .main .group .killer__num {
       display: inline-block;
       width: .32rem;
+      text-align: center;
       color: #fbb435; }
   .main .word {
     margin-top: .05rem;
@@ -166,6 +167,45 @@ body {
           top: .03rem;
           left: -.3rem;
           border: none; }
+
+.shade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  z-index: 999;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2); }
+  .shade .popup {
+    position: absolute;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    display: none;
+    box-shadow: 0 0 0.01rem 0.01rem #c9c9c9;
+    transform: translate(-1.2rem, -1.2rem);
+    border-radius: .1rem;
+    width: 2.4rem;
+    color: #787878;
+    background-color: #fff; }
+    .shade .popup .clue {
+      height: .8rem;
+      padding-left: .15rem;
+      padding-right: .15rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid #f0f0f0; }
+    .shade .popup .no,
+    .shade .popup .yes {
+      height: .4rem;
+      text-align: center; }
+    .shade .popup .no {
+      box-sizing: border-box;
+      border-right: 1px solid #f0f0f0; }
 
 /*main end*/
 /*footer*/

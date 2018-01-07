@@ -81,6 +81,7 @@ body {
     .killer__num {
       display: inline-block;
       width: .32rem;
+      text-align: center;
       color: $orange;
     }
   }
@@ -144,6 +145,39 @@ body {
           border: none;
         }
       }
+    }
+  }
+}
+.shade {
+  @include position(fixed,0,0,0,0);
+  @include mobile-layout;
+  z-index: 999;
+  display: none;
+  background-color: rgba(0,0,0,.2);
+  .popup {
+    @include position(absolute,50%,auto,auto,50%);
+    display: none;
+    box-shadow: 0 0 .01rem .01rem $gray;
+    transform: translate(-1.2rem,-1.2rem);
+    border-radius: .1rem;
+    width: 2.4rem;
+    color: $darkgray;
+    background-color: $white;
+    .clue {
+      height: .8rem;
+      padding-left: .15rem;
+      padding-right: .15rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid $lightgray;
+    }
+    .no,
+    .yes {
+      height: .4rem;
+      text-align: center;
+    }
+    .no {
+      box-sizing: border-box;
+      border-right: 1px solid $lightgray;
     }
   }
 }

@@ -1,6 +1,6 @@
 //取出身份数组
-var sId = localStorage.getItem("identity");
-var arr_id = sId.split(",");
+var data =JSON.parse(localStorage.getItem("playDate"));
+var arr_id = data.arr_id;
 
 //设置“关闭”按钮的执行动作
 $(".close").click(function(){
@@ -53,6 +53,7 @@ $("#submit-hide").click(function(){
     $("#submit-show").show();
     $("#btn-num1").html(i);
 });
+
 
 
 $("#submit-judge").click(function(){

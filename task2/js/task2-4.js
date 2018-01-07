@@ -1,6 +1,5 @@
-//取出身份数组
-var sId = localStorage.getItem("identity");
-var arr_id = sId.split(",");
+var data =JSON.parse(localStorage.getItem("playDate"));
+var arr_id = data.arr_id;
 
 console.log(localStorage);
 
@@ -34,16 +33,15 @@ for(var i=1;i<arr_id.length;i++) {
 $(".name:first").html(arr_id[0]);
 $(".num:first").html(1);
 
-//用json格式存入后续页面用到的数据
-var data = {
-    "step": 0,
-    "arr_id":arr_id,
-    "arrD": []
-};
+//存入后续游戏数据
+//var data = {
+//    "step": data.state,
+//    "arr_id":data.arr_id,
+//    "arrD": data.arrD
+//};
 
 $("#submit-start").click(function(){
-    //存入序列化的json字符串
-    localStorage.setItem("playDate",JSON.stringify(data));
+    //localStorage.setItem("playDate",JSON.stringify(data));
     window.location.href= "task2-5.html";
 });
 /**

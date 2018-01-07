@@ -4,6 +4,10 @@ var nK = parseInt(localStorage.getItem("killer"));
 
 console.log(localStorage);
 
+//设置“关闭”按钮的执行动作
+$(".close").click(function(){
+    popup(3);
+});
 
 //生成和玩家数量相等及身份对应的卡牌
 for(var i=1;i<data.arr_id.length;i++) {
@@ -81,15 +85,19 @@ $("#submit").click(function(){
 });
 //弹窗函数
 function popup(n) {
-    var arrPop = ["你是杀手不能杀死本职业，请选择其他玩家杀死", "请选择要杀死的玩家", "哥，我已经死了，你换个人杀呗"];
+    var arrPop = ["你是杀手不能杀死本职业，请选择其他玩家杀死", "请选择要杀死的玩家", "哥，我已经死了，你换个人杀呗","结束本轮游戏吗？"];
     $(".shade").show();
-    $(".clue").html(arrPop[n]);
+    $(".clue p").html(arrPop[n]);
     $(".popup").fadeIn(100);
     $(".no").click(function () {
         popupHide();
     });
     $(".yes").click(function () {
         popupHide();
+        var tips =$(".clue p").html();
+        if(tips == arrPop[3]){
+            window.location.href= "task2-1.html";
+        }
     });
     function popupHide() {
         $(".shade").hide();

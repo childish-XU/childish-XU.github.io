@@ -9,6 +9,13 @@ var x = data.step;
 $(".close").click(function(){
     popup(4);
 });
+$(".btn__again").click(function(){
+    popup(4);
+});
+$(".btn__log").click(function(){
+    window.location.href= "task2-4.html";
+});
+
 
 //根据step的执行次数生成对应天数的日程表
 var arrDate = ["二","三","四","五","六","七","八"];
