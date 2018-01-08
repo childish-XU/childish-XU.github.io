@@ -134,9 +134,11 @@ $(".no").click(function() {
 });
 $(".yes").click(function () {
     popupHide();
-    oInput.value = 12;
-    oNum = oInput.value;
-    Linkage();
+    if(oInput.value!=4&&oInput.value!=18){
+        oInput.value = 12;
+        oNum = oInput.value;
+        Linkage();
+    }
 });
 function popupHide(){
     $(".shade").hide();
