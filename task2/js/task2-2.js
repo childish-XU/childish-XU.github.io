@@ -29,8 +29,10 @@ oInput.onblur = function Set () {
 oAdd.onclick = function Add() {
     if (oNum>=18) {
         oNum=18;
+        popup();
     }else if(oNum<4) {
         oNum=4;
+        popup();
     }
     else {
         oNum++;
@@ -42,8 +44,10 @@ oAdd.onclick = function Add() {
 oMinus.onclick = function Minus() {
     if (oNum>18) {
         oNum=18;
+        popup();
     }else if(oNum<=4) {
         oNum=4;
+        popup();
     }
     else {
         oNum--;
