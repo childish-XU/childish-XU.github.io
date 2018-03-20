@@ -1,0 +1,20 @@
+<div class="login bg-img">
+    <div class="panel">
+        <div class="panel-heading"><h3 class="panel-title text-center">后台登录</h3></div>
+        <form class="panel-body"  name="myForm" novalidate>
+            <div class="user form-group input-group">
+                <span class="input-group-addon"></span>
+                <input id="user" class="form-control" type="text" name="nUser" placeholder="请输入用户名" ng-model="user" ng-pattern="/^[a-zA-Z]+$/"  ng-blur="change('rUser',myForm.nUser.$error)" required>
+                <label for="user"></label>
+            </div>
+            <div class="notice">{{rUser}}{{userWrong}}</div>
+            <div class="password form-group input-group">
+                <span class="input-group-addon"></span>
+                <input id="pwd" class="form-control" type="password" name="nPwd" placeholder="请输入密码" ng-model="pwd" ng-blur="change('rPwd',myForm.nPwd.$error)" ng-minlength = 6 required>
+                <label for="pwd"></label>
+            </div>
+            <div class="notice">{{rPwd}}{{pwdWrong}}</div>
+            <button id="submit" class="submit form-control btn btn-info"  ng-click="check(myForm.nUser.$valid&&myForm.nPwd.$valid)">提交</button>
+        </form>
+    </div>
+</div>

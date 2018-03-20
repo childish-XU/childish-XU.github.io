@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+        }
+        .c1{
+            background-color: yellow;
+        }
+        .c2{
+            background-color: aqua;
+        }
+        .c3{
+            background-color: blueviolet;
+        }
+        .c4{
+            background-color: blue;
+        }
+        .c5{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="排序">
+<div class="father">
+    <div class="c1 oDiv">3</div>
+    <div class="c2 oDiv">5</div>
+    <div class="c3 oDiv">1</div>
+    <div class="c4 oDiv">4</div>
+    <div class="c5 oDiv">2</div>
+</div>
+<script>
+    var far = document.getElementsByClassName('father');
+    var oDiv = document.getElementsByClassName('oDiv');
+    var btn = document.getElementsByTagName('input');
+
+
+    btn[0].onclick = function(){
+        var arr =[];
+        for(var i=0;i<oDiv.length;i++){
+            arr.push(oDiv[i]);
+        }
+        arr.sort(function compare(a,b){
+            if (parseInt(a.innerHTML)>parseInt(b.innerHTML)){
+                return 1
+            }else if (parseInt(a.innerHTML)<parseInt(b.innerHTML)){
+                return -1
+            }else {
+                return 0
+            }
+        });
+        for(var h=0;h<oDiv.length;h++){
+            far[0].appendChild(arr[h]);
+        }
+    };
+</script>
+</body>
+</html>

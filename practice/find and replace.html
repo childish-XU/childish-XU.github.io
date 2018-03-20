@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .introduce{
+            font-size: 20px;
+            width: 500px;
+            border: 10px solid lavender;
+            padding: 0 10px;
+            background-color: antiquewhite;
+        }
+        a{
+            color: blue;
+            text-decoration: underline;
+        }
+        input{
+            margin-top: 10px;
+            height: 30px;
+        }
+        input:nth-of-type(1){
+            width: 300px;
+        }
+        input:nth-of-type(2){
+            height: 36px;
+            width: 100px;
+        }
+        .light{
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+<div class="introduce">
+    <p><span>妙味课堂是北京妙味趣学信息技术有限公司旗下的IT培训品牌。创办多年来我们一直恪守住IT培训的原则与底限，扎扎实实研发课程、不断提升服务质量，在公司需求和学员进度中巧妙把握平衡，帮助学员打下坚实技术基础，不断向各大IT公司输送优秀开发人才！</span><a><< 折叠</a></p>
+</div>
+<input class="keys" type="text">
+<input class="search" type="button" value="搜索">
+<script>
+    var text = document.getElementsByTagName('span');
+    var btn = document.getElementsByTagName('a');
+    var search = document.getElementsByClassName('search');
+    var keys = document.getElementsByClassName('keys');
+
+    var onOff = true;
+    var str = text[0].innerHTML;
+
+    btn[0].onclick = function(){
+        if(onOff){
+            text[0].innerHTML = str.substring(0,18)+'......';
+            btn[0].innerHTML = ">> 展开";
+            onOff = false;
+        }else {
+            text[0].innerHTML = str;
+            btn[0].innerHTML = "<< 折叠";
+            onOff = true;
+        }
+    };
+
+    search[0].onclick = function(){
+        var searchValue = keys[0].value;
+        var arr = str.split(searchValue);
+        var newStr = arr.join('<span class="light">'+searchValue+'</span>');
+        text[0].innerHTML = newStr;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>keyboardEvent</title>
+    <style>
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oIn = document.getElementById("input1");
+            var oUl = document.getElementById("ul1");
+
+            oIn.onkeyup = function(ev){
+                ev = ev || event;
+                if(ev.keyCode === 13){
+                    var oLi= document.createElement('li');
+                    oLi.innerHTML = oIn.value;
+                    oUl.appendChild(oLi);
+                    oIn.value = null;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+<input id="input1" type="text">
+<ul id="ul1"></ul>
+</body>
+
+</html>

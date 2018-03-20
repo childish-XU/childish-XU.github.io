@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="article">
+    <div class=" panel panel-default">
+        <div class="panel-heading">
+            <h5>新增Article列表</h5>
+        </div>
+        <div class="list-add panel-body">
+            <form class="form-horizontal" name="myform">
+                <div class="row form-group">
+                    <label class="col-md-2 control-label" for="title">标题名称</label>
+                    <div class="col-md-10">
+                        <!--<input id="title" type="text" class="form-control">-->
+                        <input id="title" class="form-control" type="text" ng-model="title" required>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-md-2 control-label" for="type">类型</label>
+                    <div class="col-md-3">
+                        <select name="type" id="type" class="form-control" ng-model="type" required>
+                            <option value="">请选择</option>
+                            <option value="0">首页banner</option>
+                            <option value="1">找职位banner</option>
+                            <option value="2">找精英banner</option>
+                            <option value="3">行业大图</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control" ng-model="$parent.industry" ng-if="type==3" required>
+                            <option value="">请选择</option>
+                            <option value="0">移动互联网</option>
+                            <option value="1">电子商务</option>
+                            <option value="2">企业服务</option>
+                            <option value="3">020</option>
+                            <option value="4">教育</option>
+                            <option value="5">金融</option>
+                            <option value="6">游戏</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-md-2 control-label" for="explain">说明</label>
+                    <div class="col-md-10">
+                        <div id="explain" class="ueditor" ng-model="content" required></div>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-md-2 control-label" for="jump">跳转链接</label>
+                    <div class="col-md-10">
+                        <input id="jump" type="text" class="form-control" ng-model="url" required>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-md-2 control-label">配图</label>
+                    <div class="col-md-10">
+                        <div class="col-md-12 padding-0">
+                            <label for="picture" class="btn btn-primary">选择文件</label>
+                            <input id="picture" type="file" class="uploading" accept="image/png,image/gif,image/jpg" file-model="myFile" nv-file-select uploader="uploader">
+                        </div>
+                        <div class="col-md-12 padding-0">
+                            <img alt="配图预览" ng-src="{{imageSrc}}" class="img-responsive">
+                        </div>
+                        <div class="col-md-12 padding-0">
+                            <div class="table-responsive col-md-10 padding-0">
+                                <table class="table text-center" >
+                                    <thead>
+                                        <tr>
+                                            <th>图片名</th>
+                                            <th>文件大小</th>
+                                            <th>进度</th>
+                                            <th>操作</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="item in uploader.queue">
+                                        <td >{{item.file.name}}</td>
+                                        <td >{{item.file.size}}</td>
+                                        <td>
+                                            <div class="progress" style="margin-bottom: 0;">
+                                                <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }" style="width: 0%;"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="glyphicon glyphicon-ok" ng-show="item.isSuccess"></span>
+                                            <span class="glyphicon glyphicon-remove" ng-show="item.isError"></span>
+                                        </td>
+                                        <td nowrap>
+                                            <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                                <span class="glyphicon glyphicon-upload"></span> 上传
+                                            </button>
+                                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                                <span class="glyphicon glyphicon-trash"></span> 删除
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-10">
+                        <button class="btn btn-success" ng-disabled="!myform.$valid||imageSrc==undefined" ng-click="uploading(2)">立即上线</button>
+                        <button class="btn btn-success" ng-disabled="!myform.$valid||imageSrc==undefined" ng-click="uploading(1)">存为草稿</button>
+                        <button class="pull-right btn btn-default" ng-click="cancel()">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAU;EACR,YAAY,EAAE,CAAC;EACf,aAAa,EAAE,CAAC",
+"sources": ["task6-public.scss"],
+"names": [],
+"file": "task6-public.css"
+}

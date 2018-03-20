@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .mask{
+            position: relative;
+            top: 120px;
+            left: 400px;
+            width: 500px;
+            height: 120px;
+            overflow: hidden;
+            font-size: 0;
+        }
+        span{
+            font-size: 80px;
+            vertical-align: top;
+        }
+        img{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<p></p>
+<div class="mask">
+    <div class="">
+        <img src="img/0.png">
+        <img src="img/0.png">
+        <span>:</span>
+        <img src="img/0.png">
+        <img src="img/0.png">
+        <span>:</span>
+        <img src="img/0.png">
+        <img src="img/0.png">
+    </div>
+</div>
+<script>
+    var time = document.getElementsByTagName('p');
+    var timeImg = document.getElementsByTagName('img');
+    var str='';
+
+    timeNow();
+    setInterval(timeNow,1000);
+
+    function timeNow(){
+        getTime();
+        for(var i=0;i<str.length;i++){
+            timeImg[i].src = 'img/'+str.charAt(i)+'.png';
+        }
+    }
+    function getTime(){
+        var timeNow = new Date();
+        var hours =timeNow.getHours();
+        var mis =timeNow.getMinutes();
+        var sec =timeNow.getSeconds();
+        str = addZero(hours)+addZero(mis)+addZero(sec);
+    }
+    function addZero(num){
+        return num<10?'0'+num:''+num;
+    }
+</script>
+</body>
+</html>

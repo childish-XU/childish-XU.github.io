@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #div1{
+            position: relative;
+            left: -100px;
+            width: 100px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+        #div2{
+            position: absolute;
+            top: 20px;
+            left: 100px;
+            width: 20px;
+            height: 70px;
+            color: white;
+            background-color: dimgray;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">分享到</div>
+</div>
+<script>
+    var Div1 = document.getElementById('div1');
+    Div1.onmouseover = function(){
+        Div1.style.left = 0;
+    };
+    Div1.onmouseout = function(){
+        Div1.style.left = -100+'px';
+    }
+</script>
+</body>
+</html>

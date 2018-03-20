@@ -1,0 +1,72 @@
+<table class="table table-striped add-table-border">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>名称</th>
+        <th>类型</th>
+        <th>发布时间</th>
+        <th>修改时间</th>
+        <th>发布者</th>
+        <th>状态</th>
+        <th colspan="3">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="r in n.data.articleList">
+        <td>{{$index+1}}</td>
+        <td>{{r.title}}</td>
+        <td>{{r.type| arrType}}</td>
+        <td>
+            <div>{{r.createAt | date:'y-MM-d'}}</div>
+            <div>{{r.createAt | date:'HH:mm:ss'}}</div>
+        </td>
+        <td>
+            <div>{{r.updateAt | date:'y-MM-d'}}</div>
+            <div>{{r.updateAt | date:'HH:mm:ss'}}</div>
+        </td>
+        <td>{{r.author}}</td>
+        <td>{{r.status-1 | arrStatus}}</td>
+        <td class="actions"><a data-toggle="modal" data-target="#myModal2" ng-click="statusModal(r.id,r.status)">{{r.status-1 | arrOption}}</a></td>
+        <td class="actions"><a ng-click="edit(r.id)">编辑</a></td>
+        <td class="actions"><a data-toggle="modal" data-target="#myModal1" ng-click="deleteModal(r.id)">删除</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel1">提示</h4>
+            </div>
+            <div class="modal-body">
+                是否确认删除
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="delete()">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel2">提示</h4>
+            </div>
+            <div class="modal-body">
+                是否执行下线操作
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="changeStatus()">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

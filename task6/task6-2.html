@@ -1,0 +1,51 @@
+<div class="dashboard">
+    <div>
+    <div class="sidebar col-md-2 col-sm-3">
+        <div class="navbar">
+                <h4 class="navbar-header title text-center">
+                    萝卜多后台管理系统
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </h4>
+            <div id="navbar" class="menu navbar-collapse collapse">
+                <ul class="list-unstyled">
+                    <li>
+                        <a class="list-item" ng-click="switch('sVar1')">
+                            <span class="glyphicon glyphicon-tag"></span>
+                            <span class="item-title">信息管理</span>
+                            <span class="glyphicon glyphicon-chevron-left" ng-show="sVar1"></span>
+                            <span class="glyphicon glyphicon-chevron-down" ng-hide="sVar1"></span>
+                        </a>
+                        <ul class="list-unstyled" ng-hide="sVar1">
+                            <li><a>公司列表</a></li>
+                            <li><a>职位列表</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="list-item" ng-click="switch('sVar2')">
+                            <span class="glyphicon glyphicon-tag"></span>
+                            <span class="item-title">Article管理</span>
+                            <span class="glyphicon glyphicon-chevron-left" ng-show="sVar2"></span>
+                            <span class="glyphicon glyphicon-chevron-down" ng-hide="sVar2"></span>
+                        </a>
+                        <ul id="Article" class="list-unstyled" ng-hide= "sVar2">
+                            <li ng-click="entry()"><a href="">Article列表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main col-md-10 col-sm-9">
+        <div class="main-top text-right">
+            <span class="divide"></span><a>admin</a><span class="divide"></span><a class="glyphicon glyphicon-off" ng-click="exit()"></a>
+        </div>
+        <div class="main-bottom">
+            <div ui-view="secondLayer"/>
+        </div>
+    </div>
+    </div>
+</div>

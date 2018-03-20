@@ -1,0 +1,4 @@
+@mixin bg-img ($imgName,$x,$y,$w,$h) {
+  background: url("../img/#{$imgName}.png") no-repeat $x $y;
+  background-size: $w $h;
+}

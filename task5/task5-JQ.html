@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task5</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge">
+    <link rel="stylesheet" href="../frame/normalize.css">
+    <link rel="stylesheet" href="../frame/bootstrap.css">
+    <link rel="stylesheet" href="css/task5.css">
+    <style>
+        html {
+            font-size: 625%;
+        }
+        body {
+            font-size: .14rem;
+            background: url("img/timg.jpg") no-repeat 0 0;
+            background-size: cover;
+        }
+        .login {
+            background-color: rgba(255,255,255,.9);
+            margin: 2rem auto;
+            width: 4rem;
+        }
+        .panel-title {
+            line-height: .4rem;
+            font-size: .2rem;
+            font-weight: 700;
+            color: #577896;
+        }
+        .notice {
+            color: #d8534f;
+            padding-left: .25rem;
+            padding-bottom: .15rem;
+        }
+        .name .input-group-addon {
+            background: url("img/name.png") no-repeat .015rem .05rem;
+            background-size: .2rem .2rem;
+        }
+        .password .input-group-addon {
+            background: url("img/password.png") no-repeat .015rem .05rem;
+            background-size: .2rem .2rem;
+        }
+        .submit:focus {
+            /*outline: none;*/
+        }
+    </style>
+</head>
+<body>
+<div class="login panel">
+    <div class="panel-heading"><h3 class="panel-title text-center">后台登录</h3></div>
+    <div class="panel-body">
+        <div class="name form-group input-group">
+            <span class="input-group-addon"></span>
+            <input id="na" class="form-control" type="text" name="name" placeholder="请输入用户名">
+            <label for="na"></label>
+        </div>
+        <div class="password form-group input-group">
+            <span class="input-group-addon"></span>
+            <input id="pwd" class="form-control" type="text" name="pwd" placeholder="请输入密码">
+            <label for="pwd"></label>
+        </div>
+        <div id="notice" class="notice"></div>
+        <button id="submit" class="submit form-control btn btn-info" type="submit">提交</button>
+        <!--<input id="submit" class="form-control btn btn-info" type="submit" value="提交">-->
+    </div>
+</div>
+
+<script src="../frame/jquery-3.2.1.js"></script>
+<script>
+    var notice = document.getElementById("notice");
+    var submit = document.getElementById("submit");
+    var na = document.getElementById("na");
+    var pwd = document.getElementById("pwd");
+
+
+    submit.onclick = function(){
+        if(na.value == ""){
+            notice.innerHTML= "请输入用户名";
+        }else if(pwd.value == ""){
+            notice.innerHTML= "请输入密码";
+        }else {
+            $.post("/carrots-admin-ajax/a/login",
+            {
+                "name":$("#na").val(),
+                "pwd":$("#pwd").val()
+            },
+                    function(data){
+                        console.log(data);
+                        x = JSON.parse(data);
+                        if(x.code === 0){
+                            notice.innerHTML= "";
+                            window.location.href= "task5-2.html";
+                        }else if(x.code !== 0){
+                            notice.innerHTML= x.message;
+                        }
+                    }
+            )
+        }
+    }
+</script>
+</body>
+</html>

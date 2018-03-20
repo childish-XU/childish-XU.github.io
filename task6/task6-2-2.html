@@ -1,0 +1,71 @@
+<div class="article">
+    <div class="search panel panel-default">
+        <div class="row">
+            <div class="col-md-4">
+                <p class="form-group">
+                    <label for="timeFrom" class="col-md-4">发布时间</label>
+                    <div class="input-group col-md-8">
+                        <input id="timeFrom" type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dat1" is-open="popup1.opened" ng-required="true" close-text="关闭" clear-text="清空" current-text="今天" alt-input-formats="altInputFormats1" />
+                        <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p class="form-group">
+                    <label for="timeTo" class="col-md-4">—</label>
+                <div class="input-group col-md-8">
+                    <input id="timeTo" type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dat2" is-open="popup2.opened" ng-required="true" close-text="关闭" clear-text="清空" current-text="今天" alt-input-formats="altInputFormats2" />
+                        <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                </div>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="col-md-4" for="searchType">类型</label>
+                    <div class="col-md-8">
+                        <select id="searchType" class="form-control" ng-model="type">
+                            <option value="">全部</option>
+                            <option value="0">首页banner</option>
+                            <option value="1">找职位banner</option>
+                            <option value="2">找精英banner</option>
+                            <option value="3">行业大图</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="col-md-4" for="searchState">状态</label>
+                    <div class="col-md-8">
+                        <select id="searchState" class="search-state form-control" ng-model="status">
+                            <option value="">全部</option>
+                            <option value="1">草稿</option>
+                            <option value="2">上线</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right">
+            <button class="btn btn-danger"  ui-sref="admin.articleList.page({page:'1',size:'10',type:'',status:'',startAt:'',endAt:''})" ui-sref-opts="{reload: true}">清空</button>
+            <button class="btn btn-success" ng-click="search()" >搜索</button>
+        </div>
+    </div>
+    <div class="list panel panel-default">
+        <div class="panel-heading">
+            <h5>Article列表<button class="pull-right btn btn-success add" ng-click="add()">+新增</button></h5>
+        </div>
+        <div class="panel-body">
+            <div ui-view="thirdLayer"/>
+        </div>
+    </div>
+    <div class="text-right">
+        <uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" first-text="首页" previous-text="<" next-text=">" last-text="尾页" boundary-links="true" boundary-link-numbers="true" ng-change="turnPage()"></uib-pagination>
+    </div>
+</div>
